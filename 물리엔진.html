@@ -27,8 +27,8 @@
       const world = engine.world;
 
       setInterval(() => {
-        engine.world.gravity.y = $('input#gracityY').val();
-        engine.world.gravity.x = $('input#gracityX').val();
+        engine.world.gravity.y = $('input#gravityY').val();
+        engine.world.gravity.x = $('input#gravityX').val();
       }, 100);
 
       const circle = Bodies.circle(windowWidth/2, 50, 10, {
