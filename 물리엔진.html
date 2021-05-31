@@ -13,8 +13,8 @@
     
     $(function() {
       
-      const Height = 300;
-      const Width = 300;
+      const Height = 500;
+      const Width = 500;
       
       const Engine = Matter.Engine;
       const Render = Matter.Render;
@@ -29,11 +29,11 @@
         engine.world.gravity.x = $('input#gravityX').val();
       }, 100);
 
-      const ground = Bodies.rectangle(Width/2, Height-50, Width/3, 10, {
+      const point = Bodies.circle(Width/2, Height/4, 5, 5, {
               isStatic: true
             });
       
-      World.add(engine.world, [ground]);
+      World.add(engine.world, point);
       
       const render = Render.create({
           element: document.body,
