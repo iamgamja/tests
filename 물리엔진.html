@@ -25,9 +25,18 @@
       const engine = Engine.create();
 
       setInterval(() => {
-        engine.world.gravity.y = $('input#gravityY').val();
-        engine.world.gravity.x = $('input#gravityX').val();
+//         engine.world.gravity.y = $('input#gravityY').val();
+//         engine.world.gravity.x = $('input#gravityX').val();
+        $('span#y').text(engine.world.gravity.y);
+        $('span#x').text(engine.world.gravity.x);
       }, 100);
+      
+      document.body.onkeydown = function() {
+        if ( event.code == 'ArrowLeft' )  engine.world.gravity.x -= 0.01;
+        if ( event.code == 'ArrowRight' ) engine.world.gravity.x += 0.01;
+        if ( event.code == 'ArrowUp' )    engine.world.gravity.y -= 0.01;
+        if ( event.code == 'ArrowDown' )  engine.world.gravity.y += 0.01;
+      }
 
       const point = Bodies.circle(Width/2, Height/4, 5, 5, {
               isStatic: true
@@ -63,6 +72,7 @@
 
 <body>
   hi! <br>
-  gravityY: -1 <input id="gravityY" type="range" min="-1" max= "1" step="0.1" value="0.1"> +1 <br>
-  gravityX: -1 <input id="gravityX" type="range" min="-1" max= "1" step="0.1" value="0.0"> +1 <br>
+  gravityY: <span id="y"></span> <br>
+  gravityX: <span id="x"></span> <br>
+  
 </body>
