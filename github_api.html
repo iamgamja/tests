@@ -10,9 +10,6 @@
         
         $('#end_input').bind('click', function() {
           
-          let last_commit_hash;
-          let last_tree_hash;
-          
           $.ajax({
             type: "GET",
             headers: {
@@ -21,7 +18,7 @@
             url: "https://api.github.com/repos/iamgamja/tests/commits",
             dataType: "json",
             success: (r) => {
-              last_commit_hash = r[0]['sha'];
+              let last_commit_hash = r[0]['sha'];
               
               $.ajax({
                 type: "GET",
@@ -31,17 +28,19 @@
                 url: `https://api.github.com/repos/iamgamja/tests/commits/${last_commit_hash}`,
                 dataType: "json",
                 success: (r) => {
-                  last_tree_hash = r['commit']['tree']['sha'];
+                  let last_tree_hash = r['commit']['tree']['sha'];
                   
                   $.ajax({
                     type: "GET",
                     headers: {
                       accept: "application/vnd.github.v3+json",
                     },
-                    url: `https://api.github.com/repos/iamgamja/tests/trees/${last_tree_hash}`,
+                    url: `https://api.github.com/repos/iamgamja/tests/git/trees/${last_tree_hash}`,
                     dataType: "json",
                     success: (r) => {
-                      console.log('wa', r);
+                      for (let i of r['tree']) {
+                        console.log(i['path']);
+                      }
                     },
                     error: (e) => { console.log('error3:', e) },
                   });
