@@ -21,10 +21,10 @@
 //             },
             url: "https://api.github.com/repos/iamgamja/test/issues",
             dataType: "json",
-            success: function (response) {
-              var array = response;
-              for (var i = 0; i < array.length; i++) $(".container").append("<p>" + array[i].title + "</p>")
-            }
+            success: (response) => {
+              for (var i = 0; i < response.length; i++) $(".container").append("<p>" + response[i].title + "</p>")
+            },
+            error: (e) => { console.log('error:', e) }
           });
           
         });
