@@ -11,20 +11,16 @@
         $('#end_input').bind('click', function() {
           
           console.log('button click!');
-//           let auth = window.btoa(`iamgamja:${$('#input_token').val()}`);
-//           console.log(auth);
 
           $.ajax({
             type: "GET",
 //             headers: {
 //               Authorization: "Basic " + auth,
 //             },
-            url: "https://api.github.com/repos/iamgamja/test/issues",
+            url: "https://api.github.com/users/iamgamja",
             dataType: "json",
-            success: (response) => {
-              for (var i = 0; i < response.length; i++) $(".container").append("<p>" + response[i].title + "</p>")
-            },
-            error: (e) => { console.log('error:', e) }
+            success: (r) => { console.log('wa!', r) },
+            error: (e) => { console.log('error:', e) }.
           });
           
         });
