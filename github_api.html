@@ -17,7 +17,7 @@
 //             headers: {
 //               Authorization: "Basic " + auth,
 //             },
-            url: "https://api.github.com/users/iamgamja",
+            url: `https://api.github.com${$('#text').val()}`,
             dataType: "json",
             success: (r) => { console.log('wa!', r) },
             error: (e) => { console.log('error:', e) },
