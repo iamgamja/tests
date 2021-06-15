@@ -10,16 +10,29 @@
         
         $('#end_input').bind('click', function() {
           
-          console.log('button click!');
-
+          let last_commit_hash;
+          
           $.ajax({
             type: "GET",
             headers: {
               accept: "application/vnd.github.v3+json",
             },
-            url: `https://api.github.com${$('#text').val()}`,
+            url: "https://api.github.com/repos/iamgamja/tests/commits",
             dataType: "json",
-            success: (r) => { console.log('wa!', r) },
+            success: (r) => {
+              last_commit_hash = r[0]['sha'];
+              
+              $.ajax({
+                type: "GET",
+                headers: {
+                  accept: "application/vnd.github.v3+json",
+                },
+                url: `https://api.github.com/repos/iamgamja/tests/commits/${last_commit_hash}`,
+                dataType: "json",
+                success: (r) => { console.log('wa!', r) },
+                error: (e) => { console.log('error2:', e) },
+              });
+            },
             error: (e) => { console.log('error:', e) },
           });
           
@@ -30,7 +43,6 @@
   </head>
   
   <body>
-    <h1>Issue List</h1>
     <input type="text" id="input_token">
     <input type="button" id="end_input">
     <div class="container"></div>
