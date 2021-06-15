@@ -11,7 +11,7 @@
         $('#end_input').bind('click', function() {
           
           console.log('button click!');
-          let auth = window.btoa(`iamgamja: ${$('#input_token').val()} `);
+          let auth = window.btoa(`iamgamja:${$('#input_token').val()}`);
           console.log(auth);
 
           $.ajax({
