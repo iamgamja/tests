@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> title_title_title </title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      $(function() {
+        
+        var auth = window.btoa("hyun-jii: 토큰 값 ");
+  
+        $.ajax({
+          type: "GET",
+          headers: {
+            Authorization: "Basic " + auth,
+          },
+          url: "https://api.github.com/repos/iamgamja/test/issues",
+          dataType: "json",
+          success: function (response) {
+            var array = response;
+            for (var i = 0; i < array.length; i++) {
+              $(".container").append("<p>" + array[i].title + "</p>");
+            }
+          }
+        });
+        
+      });
+    </script>
+  </head>
+  
+  <body>
+    <h1>Issue List</h1>
+    <div class="container"></div>
+  </body>
+</html>
+
+
+
