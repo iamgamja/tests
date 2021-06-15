@@ -14,9 +14,9 @@
 
           $.ajax({
             type: "GET",
-//             headers: {
-//               Authorization: "Basic " + auth,
-//             },
+            headers: {
+              accept: "application/vnd.github.v3+json",
+            },
             url: `https://api.github.com${$('#text').val()}`,
             dataType: "json",
             success: (r) => { console.log('wa!', r) },
