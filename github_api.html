@@ -11,14 +11,14 @@
         $('#end_input').bind('click', function() {
           
           console.log('button click!');
-          let auth = window.btoa(`iamgamja:${$('#input_token').val()}`);
-          console.log(auth);
+//           let auth = window.btoa(`iamgamja:${$('#input_token').val()}`);
+//           console.log(auth);
 
           $.ajax({
             type: "GET",
-            headers: {
-              Authorization: "Basic " + auth,
-            },
+//             headers: {
+//               Authorization: "Basic " + auth,
+//             },
             url: "https://api.github.com/repos/iamgamja/test/issues",
             dataType: "json",
             success: function (response) {
