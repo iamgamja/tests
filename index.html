@@ -45,7 +45,7 @@
                         url: `https://api.github.com/repos/iamgamja/tests/commits?path=${i['path']}&page=1&per_page=1`,
                         dataType: "json",
                         success: (r) => {
-                          console.log(r);
+                          // console.log(r);
                           
                           let nameO = $('<span>')
                                       .text(i['path']);
@@ -59,7 +59,7 @@
                           let f = D.getSeconds().toString().padStart(2, '0');
                           
                           let editedO = $('<span>')
-                                        .text(`(${a}-${b}-${c} ${d}:${e}:${f}, ${r[0]['commit']['message']})`)
+                                        .text(`(${a}-${b}-${c} ${d>12 ? '오후' : '오전'} ${d>12 ? d-12 : d}:${e}:${f}, ${r[0]['commit']['message']})`)
                                         .css('color', 'gray')
                                         .css('font-size', '70%');
                           let O = $('<li>')
