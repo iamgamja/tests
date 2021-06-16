@@ -48,7 +48,11 @@
         function successed(r) {
           for (let i of r['tree']) {
             console.log(i);
-            let O = $('<a>').text(i['path']).attr('href', document.location.href + i['path']);
+            let O = $('<li>')
+                    .text(i['path'])
+                    .bind('click', () => {
+                      document.location.href += i['path']
+                    });
             $('#li').append(O);
           }
         }
@@ -58,7 +62,7 @@
   </head>
   
   <body>
-    <div id="li"></div>
+    <ul id="li"></ul>
   </body>
 </html>
 
