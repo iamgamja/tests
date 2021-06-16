@@ -35,12 +35,7 @@
                   },
                   url: `https://api.github.com/repos/iamgamja/tests/git/trees/${last_tree_hash}`,
                   dataType: "json",
-                  success: (r) => {
-                    for (let i of r['tree']) {
-                      let O = $('<p>').text(i['path']);
-                      $('#li').append(O);
-                    }
-                  },
+                  success: successed,
                   error: (e) => { console.log('error3:', e) },
                 });
               },
@@ -49,6 +44,14 @@
           },
           error: (e) => { console.log('error:', e) },
         });
+        
+        function successed(r) {
+          for (let i of r['tree']) {
+            console.log(i);
+            let O = $('<a>').text(i['path']).attr('href', document.location.href + i['path']);
+            $('#li').append(O);
+          }
+        }
         
       });
     </script>
