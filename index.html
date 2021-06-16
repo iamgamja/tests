@@ -49,8 +49,17 @@
                           
                           let nameO = $('<span>')
                                       .text(i['path']);
+                          
+                          let D = new Date(r[0]['commit']['author']['date']);
+                          let a = D.getFullYear();
+                          let b = (D.getMonth()+1).toString().padStart(2, '0');
+                          let c = D.getDate();
+                          let d = D.getHours();
+                          let e = D.getMinutes();
+                          let f = D.getSeconds();
+                          
                           let editedO = $('<span>')
-                                        .text(`(${r[0]['commit']['author']['date']}, ${r[0]['commit']['message']})`)
+                                        .text(`(${a}-${b}-${c} ${d}:${e}:${f}, ${r[0]['commit']['message']})`)
                                         .css('color', 'gray');
                           let O = $('<li>')
                                   .append(nameO)
