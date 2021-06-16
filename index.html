@@ -35,7 +35,34 @@
                   },
                   url: `https://api.github.com/repos/iamgamja/tests/git/trees/${last_tree_hash}`,
                   dataType: "json",
-                  success: successed,
+                  success: (r) => {
+                    for (let i of r['tree']) {
+                      $.ajax({
+                        type: "GET",
+                        headers: {
+                          accept: "application/vnd.github.v3+json",
+                        },
+                        url: `https://api.github.com/repos/iamgamja/tests/commits?path=${i['path']}&page=1&per_page=1`,
+                        dataType: "json",
+                        success: (r) => {
+                          console.log(r);
+                          
+                          let nameO = $('<span>')
+                                      .text(i['path']);
+                          let editedO = $('<span>')
+                                        .text(r['editedDate'])
+                                        .css('color', 'gray');
+                          let O = $('<li>')
+                                  .append(nameO)
+                                  .append(editedO)
+                                  .bind('click', () => {
+                                    document.location.href += i['path']
+                                  });
+                          $('#li').append(O);
+                        }
+                      });
+                    }
+                  },
                   error: (e) => { console.log('error3:', e) },
                 });
               },
@@ -44,18 +71,6 @@
           },
           error: (e) => { console.log('error:', e) },
         });
-        
-        function successed(r) {
-          for (let i of r['tree']) {
-            console.log(i);
-            let O = $('<li>')
-                    .text(i['path'])
-                    .bind('click', () => {
-                      document.location.href += i['path']
-                    });
-            $('#li').append(O);
-          }
-        }
         
       });
     </script>
