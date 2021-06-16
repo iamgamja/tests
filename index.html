@@ -50,7 +50,7 @@
                           let nameO = $('<span>')
                                       .text(i['path']);
                           let editedO = $('<span>')
-                                        .text(r['editedDate'])
+                                        .text(`(${r[0]['commit']['author']['date']}, ${r[0]['commit']['message']})`)
                                         .css('color', 'gray');
                           let O = $('<li>')
                                   .append(nameO)
