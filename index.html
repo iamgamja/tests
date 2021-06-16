@@ -53,14 +53,15 @@
                           let D = new Date(r[0]['commit']['author']['date']);
                           let a = D.getFullYear();
                           let b = (D.getMonth()+1).toString().padStart(2, '0');
-                          let c = D.getDate();
-                          let d = D.getHours();
-                          let e = D.getMinutes();
-                          let f = D.getSeconds();
+                          let c = D.getDate().toString().padStart(2, '0');
+                          let d = D.getHours().toString().padStart(2, '0');
+                          let e = D.getMinutes().toString().padStart(2, '0');
+                          let f = D.getSeconds().toString().padStart(2, '0');
                           
                           let editedO = $('<span>')
                                         .text(`(${a}-${b}-${c} ${d}:${e}:${f}, ${r[0]['commit']['message']})`)
-                                        .css('color', 'gray');
+                                        .css('color', 'gray')
+                                        .css('font-size', '70%');
                           let O = $('<li>')
                                   .append(nameO)
                                   .append(editedO)
