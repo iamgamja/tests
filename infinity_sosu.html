@@ -16,7 +16,7 @@
           
           w.onmessage = function(event) {
             // console.log(event.data);
-            if (event.data.endsWith('~')) {
+            if (event.data.toString().endsWith('~')) {
               timer = setInterval(function() {
                 $('span#output').text($('span#output').text() + event.data.slice(0, -1));
               }, 100);
