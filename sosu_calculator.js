@@ -15,21 +15,21 @@ onmessage = function(event) {
   b = parseInt(event.data[1]);
   finishied = false;
 //   data = {};
-  postMessage(`${D(a, b)}.`); // 초기화, ex) '0.'
-  last_namugi = d(a,b)
+  postMessage(`${Div(a, b)}.`); // 초기화, ex) '0.'
+  last_namugi = div(a,b)
 }
 
-function D(a, b) {  return parseInt(a/b)  }
-function d(a, b) {  return a%b  }
+function Div(a, b) {  return parseInt(a/b)  }
+function div(a, b) {  return a%b  }
 
 // while (!finishied) {
-//   postMessage(D(last_namugi, b));
-//   last_namugi = d(last_namugi, b);
+//   postMessage(Div(last_namugi, b));
+//   last_namugi = div(last_namugi, b);
 // }
 
 let timer = setInterval(function() {
-  postMessage(D(last_namugi, b));
-  last_namugi = d(last_namugi, b);
+  postMessage(Div(last_namugi, b));
+  last_namugi = div(last_namugi, b);
 }, 100);
 
 
