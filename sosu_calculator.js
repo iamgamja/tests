@@ -15,7 +15,7 @@ onmessage = function(event) {
   b = parseInt(event.data[1]);
   finishied = false;
   data = {};
-  postMessage(`${Div(a, b)}.`); // 초기화, ex) '0.'
+  postMessage(`${parseInt(a/b)}.`); // 초기화, ex) '0.'
   last_namugi = div(a,b)
 }
 
