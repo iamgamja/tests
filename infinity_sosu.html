@@ -17,11 +17,14 @@
           w.onmessage = function(event) {
             // console.log(event.data);
             if (event.data.toString().endsWith('~')) {
+              console.log('event.data가 ~로 끝났기 때문에 타이머가 실행됨. ', 'event.data는', event.data);
               timer = setInterval(function() {
                 $('span#output').text($('span#output').text() + event.data.slice(0, -1));
+                console.log('타이머에서 실행됨')
               }, 100);
             } else {
               $('span#output').text($('span#output').text() + event.data);
+              console.log('타이머 밖에서 실행됨')
             }
           }
           
