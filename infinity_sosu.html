@@ -16,17 +16,14 @@
           
           w.onmessage = function(event) {
             // console.log(event.data);
-            temp += event.data;
+            $('span#output').text($('span#output').text() + event.data);
           }
           
-          let timer = setInterval(function() {
-            $('span#output').text($('span#output').text() + temp);
-            temp = '';
-          }, 1000);
-          
-          $('.inputs').bind('input', function() {
-            $('span#output').text('');
-            w.postMessage([$('#number1').val(), $('#number2').val()]);
+          $('*').bind('keyup', function(event) {
+            if (event.keyCode == 13) {
+              $('span#output').text('');
+              w.postMessage( [$('#number1').val(), $('#number2').val()] );
+            }
           });
           
         } else {
