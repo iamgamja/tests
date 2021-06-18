@@ -16,6 +16,10 @@
             console.log(event.data);
           }
           
+          $('.inputs').bind('input', function() {
+            w.postMessage([$('#number1').val(), $('number2').val()]);
+          });
+          
         } else {
           console.log('worker 를! 지원하지 않는');
         }
@@ -25,6 +29,8 @@
   </head>
   
   <body>
-    TEXT
+    <input type="number" id="number1" class="inputs">/
+    <input type="number" id="number2" class="inputs"><br>
+    
   </body>
 </html>
