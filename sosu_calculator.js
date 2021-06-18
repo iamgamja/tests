@@ -27,7 +27,7 @@ function Div(a, b) {
     }
   } else {
     finishied = true;
-    postMessage(data[a]);
+    postMessage(data[a] + '.');
   }
   return parseInt(a/b);
 }
