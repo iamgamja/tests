@@ -20,7 +20,8 @@
           }
           
           let timer = setInterval(function() {
-            $('span#output').text($(this).text() + event.data);
+            $('span#output').text($(this).text() + temp);
+            temp = '';
           }, 1000);
           
           $('.inputs').bind('input', function() {
