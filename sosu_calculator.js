@@ -29,7 +29,7 @@ function div(a, b) {  return a%b  }
 
 let timer = setInterval(function() {
   postMessage(Div(last_namugi, b));
-  last_namugi = div(last_namugi, b);
+  last_namugi = div(last_namugi, b) * 10;
 }, 100);
 
 
