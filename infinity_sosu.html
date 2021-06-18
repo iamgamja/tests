@@ -23,7 +23,11 @@
                 console.log('타이머에서 실행됨')
               }, 100);
             } else {
-              $('span#output').text($('span#output').text() + event.data);
+              if ( $('span#output').text().endsWith('.') ) {
+                $('span#output').text($('span#output').text() + event.data.slice(1));
+              } else {
+                $('span#output').text($('span#output').text() + event.data);
+              }
               console.log('타이머 밖에서 실행됨')
             }
           }
