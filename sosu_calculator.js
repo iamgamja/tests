@@ -22,10 +22,16 @@ onmessage = function(event) {
 function D(a, b) {  return parseInt(a/b)  }
 function d(a, b) {  return a%b  }
 
-while (!finishied) {
+// while (!finishied) {
+//   postMessage(D(last_namugi, b));
+//   last_namugi = d(last_namugi, b);
+// }
+
+let timer = setInterval(function() {
   postMessage(D(last_namugi, b));
   last_namugi = d(last_namugi, b);
-}
+}, 100);
+
 
 // let timer = setInterval(function() {
 //   postMessage(a/b);
