@@ -13,10 +13,12 @@
           w = new Worker('sosu_calculator.js');
           
           w.onmessage = function(event) {
-            console.log(event.data);
+            // console.log(event.data);
+            $('span#output').text($(this).text() + event.data);
           }
           
           $('.inputs').bind('input', function() {
+            $('span#output').text('');
             w.postMessage([$('#number1').val(), $('#number2').val()]);
           });
           
@@ -30,7 +32,7 @@
   
   <body>
     <input type="number" id="number1" class="inputs" value="1"> /
-    <input type="number" id="number2" class="inputs" value="3"><br>
-    
+    <input type="number" id="number2" class="inputs" value="3"> =<br>
+    <span id="output"></span>
   </body>
 </html>
