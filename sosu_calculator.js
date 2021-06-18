@@ -23,5 +23,5 @@ onmessage = function(event) {
 // }
   
 let timer = setInterval(function() {
-  postMessage(a, b);
+  postMessage([a, b]);
 }, 1000);
