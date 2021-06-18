@@ -20,7 +20,7 @@ onmessage = function(event) {
 }
 
 function Div(a, b) {
-  if (data[a] !== undefined) {
+  if (data[a] === undefined) {
     data[a] = '';
     for (i in data) {
       data[i] += String(parseInt(a/b));
