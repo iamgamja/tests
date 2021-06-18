@@ -12,10 +12,16 @@
           
           w = new Worker('sosu_calculator.js');
           
+          let temp = '';
+          
           w.onmessage = function(event) {
             // console.log(event.data);
-            $('span#output').text($(this).text() + event.data);
+            temp += event.data;
           }
+          
+          let timer = setInterval(function() {
+            $('span#output').text($(this).text() + event.data);
+          }, 1000);
           
           $('.inputs').bind('input', function() {
             $('span#output').text('');
