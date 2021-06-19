@@ -42,8 +42,9 @@ function div(a, b) {
 
 let timer = setInterval(function() {
   if (!finishied) {
+    last_namugi *= 10;
     postMessage(Div(last_namugi, b));
-    last_namugi = div(last_namugi, b) * 10
+    last_namugi = div(last_namugi, b)
   }
 }, 100);
 
