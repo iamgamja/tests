@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> infinity_sosu </title>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    
+    <style>
+      body {
+        word-break:break-all;
+      }
+    </style>
+    
     <script>
       $(function() {
         
@@ -21,7 +28,7 @@
               timer = setInterval(function() {
                 $('span#output').text($('span#output').text() + event.data.slice(0, -1));
                 console.log('타이머에서 실행됨')
-              }, 100);
+              }, 10);
             } else {
               $('span#output').text($('span#output').text() + event.data);
             }
