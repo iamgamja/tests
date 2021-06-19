@@ -1,7 +1,7 @@
 let a = 1;
 let b = 3; // b가 나누는 수. 항상 b로 나눈다.
 
-let finishied = false;
+let finishied = true;
 
 let data = {
   // 1: '3' 
@@ -46,7 +46,7 @@ let timer = setInterval(function() {
     postMessage(Div(last_namugi, b));
     last_namugi = div(last_namugi, b)
   }
-}, 100);
+}, 10);
 
 
 // let timer = setInterval(function() {
