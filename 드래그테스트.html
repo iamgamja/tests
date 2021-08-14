@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> title_title_title </title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.17/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script>
+      $(function() {
+        console.log('TEXT');
+
+        $("#b").draggable({
+          start: () => {
+            $("#log").text("드래그하다")
+          }
+        });
+
+        $("#A").draggable({
+          drop: () => {
+            $("#log").text("드롭되다")
+          }
+        });
+
+        
+
+
+
+      });
+    </script>
+    <style>
+      html,body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* box-sizing: border-box; */
+      /* width 등으로 지정한 크기가 
+       * padding, margin 등 여백을 포함한 크기가 됨.
+       */
+      div { border: 1px solid black }
+
+      div#A {
+        width: 100px;
+        height: 100px;
+      }
+      div#b {
+        width: 50px;
+        height: 50px;
+      }
+
+    </style>
+  </head>
+  
+  <body>
+    <div id="A">A</div>
+    <div id="b">b</div>
+    b를A에 드래그하다
+    <div id="log"></div>
+  </body>
+</html>
