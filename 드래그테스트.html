@@ -13,14 +13,22 @@
         console.log('TEXT');
 
         $("#b").draggable({
-          start: () => {
+          start: (event, ui) => {
             $("#log").text("드래그하다")
           }
         });
 
         $("#A").droppable({
-          drop: () => {
-            $("#log").text("드롭되다")
+          drop: (event, ui) => {
+            $("#log").text("A드롭되다")
+            $("#b").appendTo("#A")
+          }
+        });
+
+        $("#B").droppable({
+          drop: (event, ui) => {
+            $("#log").text("B드롭되다")
+            $("#b").appendTo("#B")
           }
         });
 
@@ -57,6 +65,7 @@
   
   <body>
     <div id="A">A</div>
+    <div id="B">B</div>
     <div id="b">b</div>
     b를A에 드래그하다
     <div id="log"></div>
