@@ -30,7 +30,8 @@
             console.log(event)
             $("#log").text("B드롭되다")
             $("#b").appendTo("#B")
-            // .draggable("destroy")
+            // $(event.toElement).draggable("destroy")
+            $(event.toElement).css('left', '0').css('top', '0')
           }
         });
 
