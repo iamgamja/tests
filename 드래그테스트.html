@@ -6,35 +6,47 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title> title_title_title </title>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<!--     <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> -->
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script> -->
     <script>
       $(function() {
         console.log('TEXT');
 
-        $("#b").draggable({
-          start: (event, ui) => {
-            $("#log").text("드래그하다")
-          }
+        let dragged;
+        
+        $('.drag').bind('dragstart', (event) => {
+          dragged = $(event.target);
+          dragged.css('opacity', '0.5') // 반투명하게
         });
 
-        $("#A").droppable({
-          drop: (event, ui) => {
-            $("#log").text("A드롭되다")
-            $("#b").appendTo("#A")
-          }
+        $('.drag').bind('dragend', (event) => {
+          dragged.css('opacity', '') // 투명도리셋
         });
 
-        $("#B").droppable({
-          drop: (event, ui) => {
-            console.log(event)
-            $("#log").text("B드롭되다")
-            $("#b").appendTo("#B")
-            // $(event.toElement).draggable("destroy")
-            $(event.toElement).css('left', '0').css('top', '0')
-          }
+        $('.drop').bind('dragover', (event) => {
+          event.preventDefault();
         });
 
+        $('.drop').bind('dragenter', (event) => {
+          $(event.target).css('background-color', 'red')
+        });
+
+        $('.drop').bind('dragleave', (event) => {
+          $(event.target).css('background-color', '')
+        });
+        
+        $(document).bind('drop', (event) => {
+          event.preventDefault()
+        });
+        
+        $('.drop').bind('drop', (event) => {
+          $(event.target).css('background-color', '')
+          dragged.appendTo(event.target)
+        });
+        
+        
+        
+        
       });
     </script>
     <style>
@@ -50,13 +62,15 @@
        */
       div { border: 1px solid black }
 
-      div#A, div#B {
+      .drop {
         width: 100px;
         height: 100px;
+        backgroud-color: lime;
       }
-      div#b {
+      .drag {
         width: 50px;
         height: 50px;
+        backgroud-color: orange;
       }
 
     </style>
@@ -67,16 +81,9 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div id="A">A</div>
-    <div id="B">B</div>
-    <div id="b">b</div>
+    <div class="drop">A</div>
+    <div class="drop">B</div>
+    <div class="drag">b</div>
     b를A에 드래그하다
-    <div id="log"></div>
   </body>
 </html>
