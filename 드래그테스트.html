@@ -27,14 +27,12 @@
 
         $("#B").droppable({
           drop: (event, ui) => {
+            console.log(event)
             $("#log").text("B드롭되다")
             $("#b").appendTo("#B")
+            // .draggable("destroy")
           }
         });
-
-        
-
-
 
       });
     </script>
@@ -64,6 +62,16 @@
   </head>
   
   <body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div id="A">A</div>
     <div id="B">B</div>
     <div id="b">b</div>
