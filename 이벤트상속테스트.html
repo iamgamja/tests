@@ -9,8 +9,9 @@
       $(function() {
         $('body').on('click', 'button', (event) => {
           $(event.target).text('wa')
-          $('body').append('<button>새로운버튼</button>')
-        }
+          let b = $('<button>').text('new')
+          $('body').append(b)
+        });
       });
     </script>
     <style>
@@ -28,6 +29,6 @@
   </head>
   
   <body>
-    <button>이것을클릭하면새로운버튼이!생길것</button>
+    <button>이것을클릭하면새로운버튼이!생길것이겠지</button>
   </body>
 </html>
