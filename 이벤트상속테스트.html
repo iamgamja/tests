@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> title_title_title </title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      $(function() {
+        $('body').on('click', 'button', (event) => {
+          $(event.target).text('wa')
+          $('body').append('<button>새로운버튼</button>')
+        }
+      });
+    </script>
+    <style>
+      html,body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* box-sizing: border-box; */
+      /* width 등으로 지정한 크기가 
+       * padding, margin 등 여백을 포함한 크기가 됨.
+       */
+    </style>
+  </head>
+  
+  <body>
+    <button>이것을클릭하면새로운버튼이!생길것</button>
+  </body>
+</html>
