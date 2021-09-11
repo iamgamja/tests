@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+    
+    #circle1 {
+      display:inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+  </style>
+  
+  <title>time</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  
+  <script>
+    $(function() {
+      let cycle = 10;
+      
+      $('input[type=range]#range').bind('input', function() {
+        cycle = $(this).val();
+      });
+      
+      const ld = new Date();
+      const lf1 = ld.getHours();
+      const lf2 = ld.getMinutes();
+      const lf3 = ld.getSeconds();
+      const lf4 = ld.getMilliseconds();
+      
+      let timer = setInterval(function() {
+        let d = new Date();
+        let f1 = String(d.getHours()).padStart(2,'0');
+        let f2 = String(d.getMinutes()).padStart(2,'0');
+        let f3 = String(d.getSeconds()).padStart(2,'0');
+        let f4 = String(d.getMilliseconds()).padStart(3,'0');
+        let format = `${f1}:${f2}:${f3}:${f4}`;
+        $('span#timer').text(format);
+        
+        let taken_time = (d-ld)/1000;
+        let [M, m] = [parseInt(taken_time / cycle), taken_time % cycle];
+        let color1 = M % 2 ? '#ff0000' : '#ffff00';
+        let color2 = M % 2 ? '#ffff00' : '#ff0000';
+        let angle = m * 100 / cycle;
+        
+        $('div#circle1').css('background', `conic-gradient(${color1} 0% ${angle}%, ${color2} ${angle}% 100%`);
+      }, 11);
+      
+    });
+  </script>
+</head>
+
+<body>
+  <span id="timer">로딩중입니다..</span>
+  <br><br>
+  
+  <div id="circle1"></div>
+  
+  <input type="range" id="range" min="1" max="60">
+    
+</body>
+</html>
