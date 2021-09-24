@@ -35,17 +35,18 @@
             }
           }
           
-          let EnterFoo = (event) => {
+          let 
+
+          $('*').bind('keyup', (event) => {
             if (event.keyCode == 13 && typeof timer !== 'undefined') {
               clearInterval(timer);
               timer = undefined;
               $('span#output, output#madi').text('');
               w.postMessage( [$('#number1').val(), $('#number2').val()] );
             }
-          }
+          });
 
-          $('*').bind('keyup', EnterFoo);
-          $('#enter').bind('click', EnterFoo);
+          // $('#enter').bind('click', EnterFoo);
           
         } else {
           console.log('worker 를! 지원하지 않는');
