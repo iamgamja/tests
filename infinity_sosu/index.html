@@ -23,27 +23,29 @@
           
           w.onmessage = (event) => {
             let value = event.data.toString();
-            // console.log(value);
             if (value.endsWith('~')) {
               console.log('value가 ~로 끝났기 때문에 타이머가 실행됨. value는:', value);
               $('output#madi').text(value.slice(0, -1));
               timer = setInterval(() => {
                 $('span#output').text($('span#output').text() + value.slice(0, -1));
-                console.log('타이머에서 실행됨')
+                console.log('타이머에서 실행됨');
               }, 10);
             } else {
               $('span#output').text($('span#output').text() + value);
             }
           }
           
-          $('body').on('keyup', function(event) {
-            if (event.keyCode == 13 && timer !== undefined) {
+          let EnterFoo = (event) => {
+            if (event.keyCode == 13 && typeof timer !== 'undefined') {
               clearInterval(timer);
               timer = undefined;
               $('span#output, output#madi').text('');
               w.postMessage( [$('#number1').val(), $('#number2').val()] );
             }
-          });
+          }
+
+          $('*').on('keyup', EnterFoo);
+          $('#enter').on('click', EnterFoo);
           
         } else {
           console.log('worker 를! 지원하지 않는');
@@ -54,9 +56,12 @@
   </head>
   
   <body>
-    순환마디: <output id="madi"><output>
-    <input type="number" id="number1" class="inputs" value="1"> /
-    <input type="number" id="number2" class="inputs" value="3"> =<br>
-    <span id="output"></span>
+    순환마디: <output id="madi"><output> <br>
+    <input type="number" id="number1" class="inputs" value="1"> <br>
+    ÷ <br>
+    <input type="number" id="number2" class="inputs" value="3"> <br>
+    <button id="enter">=</button> <br>
+    <span id="output"></span> <br>
+    
   </body>
 </html>
