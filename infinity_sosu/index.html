@@ -17,28 +17,30 @@
         
         if (typeof(Worker) !== "undefined") {
           
-          w = new Worker('sosu_calculator.js');
+          let w = new Worker('sosu_calculator.js');
           
-          let timer = 1;
+          let timer;
           
-          w.onmessage = function(event) {
-            // console.log(event.data);
-            if (event.data.toString().endsWith('~')) {
-              console.log('event.data가 ~로 끝났기 때문에 타이머가 실행됨. ', 'event.data는', event.data);
-              timer = setInterval(function() {
-                $('span#output').text($('span#output').text() + event.data.slice(0, -1));
+          w.onmessage = (event) => {
+            let value = event.data.toString();
+            // console.log(value);
+            if (value.endsWith('~')) {
+              console.log('value가 ~로 끝났기 때문에 타이머가 실행됨. value는:', value);
+              $('output#madi').text(value.slice(0, -1));
+              timer = setInterval(() => {
+                $('span#output').text($('span#output').text() + value.slice(0, -1));
                 console.log('타이머에서 실행됨')
               }, 10);
             } else {
-              $('span#output').text($('span#output').text() + event.data);
+              $('span#output').text($('span#output').text() + value);
             }
           }
           
-          $('*').bind('keyup', function(event) {
+          $('body').on('keyup', function(event) {
             if (event.keyCode == 13 && timer !== undefined) {
               clearInterval(timer);
               timer = undefined;
-              $('span#output').text('');
+              $('span#output, output#madi').text('');
               w.postMessage( [$('#number1').val(), $('#number2').val()] );
             }
           });
@@ -52,6 +54,7 @@
   </head>
   
   <body>
+    순환마디: <output id="madi"><output>
     <input type="number" id="number1" class="inputs" value="1"> /
     <input type="number" id="number2" class="inputs" value="3"> =<br>
     <span id="output"></span>
