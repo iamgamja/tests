@@ -44,8 +44,8 @@
             }
           }
 
-          $('*').on('keyup', EnterFoo);
-          $('#enter').on('click', EnterFoo);
+          $('*').bind('keyup', EnterFoo);
+          $('#enter').bind('click', EnterFoo);
           
         } else {
           console.log('worker 를! 지원하지 않는');
