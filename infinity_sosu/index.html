@@ -35,8 +35,8 @@
             }
           }
           
-          $('*').bind('keyup', (event) => {
-            if (event.keyCode == 13 && typeof timer !== 'undefined') {
+          $('#enter').bind('click', (event) => {
+            if (typeof timer !== 'undefined') {
               clearInterval(timer);
               timer = undefined;
               $('span#output, output#madi').text('');
