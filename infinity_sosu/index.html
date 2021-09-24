@@ -19,7 +19,7 @@
           
           let w = new Worker('sosu_calculator.js');
           
-          let timer;
+          let timer = 1; // 처음에는 undefined가 아닌 상태로 시작
           
           w.onmessage = (event) => {
             let value = event.data.toString();
