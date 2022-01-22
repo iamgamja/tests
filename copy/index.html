@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> copy </title>
-    <script>
-
-      // 1. get url param c
-      const url = new URL(window.location.href);
-      const c = url.searchParams.get('c');
-
-      // 2. copy
-      const tempElem = document.createElement('textarea');
-      tempElem.value = c;  
-      document.body.appendChild(tempElem);
-      tempElem.select();
-      document.execCommand("copy");
-      // document.body.removeChild(tempElem);
-
-      // 3. close window
-      window.close();
-
-    </script>
   </head>
   
   <body>
   </body>
+
+  <script>
+
+    // 1. get url param c
+    const url = new URL(window.location.href);
+    const c = url.searchParams.get('c');
+
+    // 2. copy
+    const tempElem = document.createElement('textarea');
+    tempElem.value = c;  
+    document.body.appendChild(tempElem);
+    tempElem.select();
+    document.execCommand("copy");
+    // document.body.removeChild(tempElem);
+
+    // 3. close window
+    window.close();
+
+  </script>
 </html>
