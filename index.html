@@ -16,7 +16,7 @@
           url: "https://api.github.com/repos/iamgamja/tests/commits",
           dataType: "json",
           success: (r) => {
-            let last_commit_hash = r[0]['sha'];
+            let last_commit_hash = r[0].sha;
 
             $.ajax({
               type: "GET",
@@ -26,7 +26,7 @@
               url: `https://api.github.com/repos/iamgamja/tests/commits/${last_commit_hash}`,
               dataType: "json",
               success: (r) => {
-                let last_tree_hash = r['commit']['tree']['sha'];
+                let last_tree_hash = r.commit.tree.sha;
 
                 $.ajax({
                   type: "GET",
@@ -36,21 +36,21 @@
                   url: `https://api.github.com/repos/iamgamja/tests/git/trees/${last_tree_hash}`,
                   dataType: "json",
                   success: (r) => {
-                    for (let i of r['tree']) {
+                    console.log(r);
+                    for (let i of r.tree) {
                       $.ajax({
                         type: "GET",
                         headers: {
                           accept: "application/vnd.github.v3+json",
                         },
-                        url: `https://api.github.com/repos/iamgamja/tests/commits?path=${i['path']}&page=1&per_page=1`,
+                        url: `https://api.github.com/repos/iamgamja/tests/commits?path=${i.path}&page=1&per_page=1`,
                         dataType: "json",
                         success: (r) => {
-                          // console.log(r);
                           
                           let nameO = $('<span>')
-                                      .text(i['path']);
+                                      .text(i.path);
                           
-                          let D = new Date(r[0]['commit']['author']['date']);
+                          let D = new Date(r[0].commmit.author.date);
                           let a = D.getFullYear();
                           let b = (D.getMonth()+1).toString().padStart(2, '0');
                           let c = D.getDate().toString().padStart(2, '0');
@@ -59,14 +59,14 @@
                           let f = D.getSeconds().toString().padStart(2, '0');
                           
                           let editedO = $('<span>')
-                                        .text(`(${a}-${b}-${c} ${d>12 ? '오후' : '오전'} ${d>12 ? d-12 : d}:${e}:${f}, ${r[0]['commit']['message']})`)
+                                        .text(`(${a}-${b}-${c} ${d>12 ? '오후' : '오전'} ${d>12 ? d-12 : d}:${e}:${f}, ${r[0].commit.message})`)
                                         .css('color', 'gray')
                                         .css('font-size', '85%');
                           let O = $('<li>')
                                   .append(nameO)
                                   .append(editedO)
                                   .bind('click', () => {
-                                    window.location.href += i['path']
+                                    window.location.href += i.path
                                   });
                           $('#li').append(O);
                         }
