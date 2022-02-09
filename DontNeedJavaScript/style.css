@@ -7,7 +7,10 @@ body {
   text-align: center;
 }
 
-input[type="checkbox"]:nth-child(1):checked:before {
-  --y: calc( var(--y, var(--x)) + 1 );
-  content: "🤔" var(--y) "🤔";
+input[type="checkbox"]:focus {
+  --y: calc( var(--y, 0) + 1 );
+}
+
+input[type="checkbox"]:focus:after {
+  content: "hi";
 }
