@@ -1,3 +1,13 @@
+:root {
+  /* 변수 초기화 */
+  --x: 0;
+}
+
 body {
   text-align: center;
+}
+
+input[type="checkbox"]:nth-child(1):checked:before {
+  --y: calc( var(--y, var(--x)) + 1 );
+  content: "🤔" var(--y) "🤔";
 }
