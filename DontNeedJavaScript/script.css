@@ -4,7 +4,7 @@
 }
 
 input[type="checkbox"]:checked {
-  counter-increment: x calc( counter(x) + 1 );
+  counter-increment: x 1;
   /* --y: counter(x); */
 }
 
