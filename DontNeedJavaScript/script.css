@@ -1,10 +1,5 @@
 :root {
   /* 변수 초기화 */
-  --x: 0;
-}
-
-
-input[type="checkbox"] {
   counter-reset: x 0;
 }
 
