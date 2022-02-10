@@ -15,7 +15,7 @@ option {
 }
 
 option:checked::after {
-  display: fixed;
+  position: fixed;
   right: 20px;
   top: 30px;
   content: "hi";
