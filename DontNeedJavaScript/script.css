@@ -1,7 +1,7 @@
 :root {
   /* 변수 초기화 */
   counter-reset: x 0;
-  
+
   counter-reset: nth-select; /* select 번호 초기화 */
 }
 
@@ -14,3 +14,9 @@ option {
   counter-increment: nth-option; /* option 번호 증가 */
 }
 
+option:checked::after {
+  display: fixed;
+  right: 20px;
+  top: 30px;
+  content: "hi";
+}
