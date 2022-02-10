@@ -8,7 +8,7 @@ input[type="checkbox"]::after {
 }
 
 input[type="checkbox"]:checked {
-  --y: 1;
+  --y: calc();
 }
 
 input[type="checkbox"]:checked::before {
