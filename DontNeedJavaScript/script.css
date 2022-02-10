@@ -7,11 +7,11 @@ input[type="checkbox"]::after {
   content: "+" attr(S);
 }
 
-input[type="checkbox"]:focus {
-  --y: calc( var(--y, var(--x, 0)) + 1 );
+input[type="checkbox"]:checked {
+  --y: 1;
 }
 
-input[type="checkbox"]:focus::before {
+input[type="checkbox"]:checked::before {
   counter-reset: x var(--y);
   content: "hi" counter(x);
 }
