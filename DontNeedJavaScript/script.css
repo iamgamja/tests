@@ -13,6 +13,5 @@ input[type="checkbox"]:focus {
 
 input[type="checkbox"]:focus::before {
   counter-reset: x var(--x);
-  content: counter(v);
   content: "hi" counter(x);
 }
