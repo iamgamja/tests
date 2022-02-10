@@ -8,10 +8,10 @@ input[type="checkbox"]::after {
 }
 
 input[type="checkbox"]:focus {
-  /* --y: calc( var(--y, 0) + 1 ); */
+  --y: calc( var(--y, var(--x, 0)) + 1 );
 }
 
 input[type="checkbox"]:focus::before {
-  counter-reset: x var(--x);
+  counter-reset: x var(--y);
   content: "hi" counter(x);
 }
