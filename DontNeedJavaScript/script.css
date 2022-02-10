@@ -12,5 +12,5 @@ input[type="checkbox"]:focus {
 }
 
 input[type="checkbox"]:focus::before {
-  content: "hi" var(--y)
+  content: "hi" var(--y);
 }
