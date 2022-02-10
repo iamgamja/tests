@@ -1,0 +1,12 @@
+:root {
+  /* 변수 초기화 */
+  --x: 0;
+}
+
+input[type="checkbox"]:focus {
+  --y: calc( var(--y, 0) + 1 );
+}
+
+input[type="checkbox"]:focus:after {
+  content: "hi";
+}

@@ -1,16 +1,7 @@
-:root {
-  /* 변수 초기화 */
-  --x: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
 body {
   text-align: center;
+  font-family: 'Noto Sans KR'
 }
 
-input[type="checkbox"]:focus {
-  --y: calc( var(--y, 0) + 1 );
-}
-
-input[type="checkbox"]:focus:after {
-  content: "hi";
-}
