@@ -8,10 +8,11 @@ input[type="checkbox"]::after {
 }
 
 input[type="checkbox"]:checked {
+  counter-reset: x calc( counter(x) + 1 );
   --y: calc( var(--x) + 1 );
 }
 
 input[type="checkbox"]:checked::before {
-  counter-reset: x var(--y);
-  content: "hi" counter(x);
+  counter-reset: y var(--y);
+  content: "hi" counter(y);
 }
