@@ -3,16 +3,17 @@
   --x: 0;
 }
 
-input[type="checkbox"]::after {
-  content: "+" attr(S);
+
+input[type="checkbox"] {
+  counter-reset: x 0;
 }
 
 input[type="checkbox"]:checked {
   counter-reset: x calc( counter(x) + 1 );
-  --y: calc( var(--x) + 1 );
+  /* --y: counter(x); */
 }
 
 input[type="checkbox"]:checked::before {
-  counter-reset: y var(--y);
-  content: "hi" counter(y);
+  /* counter-reset: y var(--y); */
+  content: "hi" counter(x);
 }

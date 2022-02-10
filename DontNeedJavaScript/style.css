@@ -31,3 +31,8 @@ input[type="checkbox"]::after {
   position: absolute;
   top: 40px;
 }
+
+/* after content, 고정값이므로 여기에 작성함. */
+input[type="checkbox"]::after {
+  content: "+" attr(n);
+}
