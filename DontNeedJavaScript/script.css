@@ -8,5 +8,5 @@ input[type="checkbox"]:focus {
 }
 
 input[type="checkbox"]:focus:after {
-  content: "hi";
+  content: "hi" var(--y);
 }
