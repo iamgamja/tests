@@ -1,17 +1,16 @@
 :root {
   /* 변수 초기화 */
   counter-reset: x 0;
+  
+  counter-reset: nth-select; /* select 번호 초기화 */
 }
 
-input[type="checkbox"]:checked {
-  counter-increment: x 1;
-  counter-increment: x 1;
-  counter-increment: x 1;
-  counter-increment: x 1;
-  /* --y: counter(x); */
+select {
+  counter-increment: nth-select; /* select 번호 증가 */
+  counter-reset: nth-option; /* option 번호 초기화 */
 }
 
-input[type="checkbox"]:checked::before {
-  /* counter-reset: y var(--y); */
-  content: "hi" counter(x);
+option {
+  counter-increment: nth-option; /* option 번호 증가 */
 }
+

@@ -17,22 +17,3 @@ body {
 #main {
   display: inline-block;
 }
-
-input[type="checkbox"] {
-  position: relative;
-}
-
-input[type="checkbox"]::before {
-  position: absolute;
-  top: 20px;
-}
-
-input[type="checkbox"]::after {
-  position: absolute;
-  top: 40px;
-}
-
-/* after content, 고정값이므로 여기에 작성함. */
-input[type="checkbox"]::after {
-  content: "+" attr(n);
-}
