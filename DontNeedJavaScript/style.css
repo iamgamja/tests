@@ -10,12 +10,8 @@ body {
   font-family: 'Noto Sans KR'
 }
 
-/* span {
-
-} */
-
 input[type="checkbox"] {
-  position: absolute;
+  position: relative;
 }
 
 input[type="checkbox"]::after {
