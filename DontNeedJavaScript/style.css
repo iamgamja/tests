@@ -52,7 +52,7 @@ input {
 
 input:checked {
   background: white;
-  box-shadow: var(--checked-boz-shadow);
+  box-shadow: var(--checked-box-shadow);
 }
 
 /* script */
