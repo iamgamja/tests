@@ -56,6 +56,9 @@ button {
 
 button:hover {
   background: #025ce2;
-  outline: 0;
+  /* outline: 0; */
 }
 
+button:focus {
+  outline: black 1px solid;
+}
