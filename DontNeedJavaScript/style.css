@@ -70,7 +70,7 @@ body {
 }
 
 .button:focus {
-  text-de
+  text-decoration: underline;
 }
 
 .main {
