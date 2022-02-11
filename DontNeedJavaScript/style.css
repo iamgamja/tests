@@ -35,7 +35,9 @@ input[type="checkbox"] {
   -webkit-appearance: none;
   display: block;
   float: left;
-  padding: 0px 3px;
+  width: 10px;
+  height: 10px;
   margin: 0;
+  padding: 0px 3px;
   font-size: 7pt;
 }
