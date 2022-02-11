@@ -21,13 +21,14 @@ body {
 
 div#a, div#b {
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   text-align: center;
 }
 
 div#a-top, div#b-top {
-  flex: auto;
+  flex: none;
   padding: 10px 0;
 }
 
