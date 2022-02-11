@@ -15,11 +15,6 @@ body {
 }
 
 /* style */
-body {
-  display: flex;
-}
-
-
 input {
   border: 1px black solid;
 }
