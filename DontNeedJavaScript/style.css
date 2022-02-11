@@ -19,7 +19,7 @@ body {
   display: flex;
 }
 
-div#a, div#b {
+.box {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -27,12 +27,12 @@ div#a, div#b {
   text-align: center;
 }
 
-div#a-top, div#b-top {
+.top {
   flex: none;
   padding: 10px 0;
 }
 
-button#a-button, button#b-button {
+.button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -62,16 +62,16 @@ button#a-button, button#b-button {
   color: #ffffff;
 }
 
-button#a-button:hover, button#b-button:hover {
+.button:hover {
   background: #025ce2;
 }
 
-button#a-button:focus, button#b-button:focus {
+.button:focus {
   background: #025ce2;
   outline: black 2px solid;
 }
 
-div#a-main, div#b-main {
+.main {
   flex: 1;
 }
 
