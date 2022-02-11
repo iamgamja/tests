@@ -65,7 +65,7 @@ body {
 }
 
 .button:hover,
-.button:hover {
+.button:focus {
   background: #025ce2;
 }
 
