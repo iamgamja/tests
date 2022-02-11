@@ -57,34 +57,26 @@ input:checked {
 
 /* script */
 /*
- * 1 2 3
- * 4 5 6  // 가운데 칸의 정보도 필요함.
- * 7 8 9
+ * 1 2 3 (7개의 *+)
+ * 4 5 6 (7개의 *+) // 가운데 칸의 정보도 필요함.
+ * 7 8 9 (88개의 *+, 1개의 +input)
  * 
  * input에서 output으로 가려면 100번의 `*+`이 필요함.
- * 하지만 cell9에서 시작하므로 output의 5번으로 가기 위해서는 89번의 `*+`이 필요함.
+ * 하지만 cell9에서 시작하므로 output의 5번으로 가기 위해서는 88번의 `*+`, 1번의 `+input`이 필요함.
  */
 
-input:checked + input:checked + input:checked + 
-input:checked + input:checked + input:checked + 
-input:checked + input:checked + input:checked + 
-*+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+input {
-  background: white;
-  box-shadow: var(--checked-box-shadow);
-}
-
-input:checked + input:checked + input:checked + 
-input:checked + input:checked + input:checked + 
+input:checked + input:checked + input:checked + *+*+*+*+*+*+*+
+input:checked + input:checked + input:checked + *+*+*+*+*+*+*+
 input:checked + input:checked + input:checked +
-input {
-  background: blue;
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input {
+  background: white;
   box-shadow: var(--checked-box-shadow);
 }
