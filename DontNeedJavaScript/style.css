@@ -80,3 +80,11 @@ input:checked + input:checked + input:checked +
   background: white;
   box-shadow: var(--checked-box-shadow);
 }
+
+input:checked + input:checked + input:checked + 
+input:checked + input:checked + input:checked + 
+input:checked + input:checked + input:checked +
+input {
+  background: blue;
+  box-shadow: var(--checked-box-shadow);
+}
