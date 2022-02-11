@@ -32,7 +32,7 @@ input[result] {
   margin-top: calc( var(--cell-size) * 3 );
 }
 
-input[type="checkbox"] {
+input {
   -webkit-appearance: none;
   display: block;
   float: left;
