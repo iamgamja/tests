@@ -1,5 +1,12 @@
 :root {
   /* 변수 초기화 */
   counter-reset: x 0;
+}
 
+.button[ab="a"]:focus + div.main span.text::after {
+  content: "haee1";
+}
+
+.button[ab="b"]:focus + div.main span.text::after {
+  content: "haee2";
 }
