@@ -20,13 +20,18 @@ body {
 }
 
 div#a, div#b {
+  display: flex;
   width: 100%;
   height: 100%;
   text-align: center;
-  padding-top: 10px;
 }
 
-button {
+div#a-top, div#b-top {
+  flex: auto;
+  padding: 10px 0;
+}
+
+button#a-button, button#b-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -56,11 +61,16 @@ button {
   color: #ffffff;
 }
 
-button:hover {
+button#a-button:hover, button#b-button:hover {
   background: #025ce2;
 }
 
-button:focus {
+button#a-button:focus, button#b-button:focus {
   background: #025ce2;
   outline: black 2px solid;
 }
+
+div#a-main, div#b-main {
+  flex: 1;
+}
+
