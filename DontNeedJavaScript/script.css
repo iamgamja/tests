@@ -3,18 +3,3 @@
   counter-reset: x 0;
 }
 
-.button[ab="a"]:focus + div.main span.text::after {
-  counter-increment: x 1;
-  --y: calc( counter(x) + 0 );
-  counter-reset: z var(--y);
-  content: "haee" counter(z);
-}
-
-/* .button[ab="b"]:focus + div.main span.text::after {
-  content: "haee2";
-} */
-
-.button[ab="b"]:hover + div.main span.text::after {
-  counter-increment: x 100;
-  content: "haee2";
-}
