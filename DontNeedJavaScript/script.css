@@ -4,7 +4,10 @@
 }
 
 .button[ab="a"]:focus + div.main span.text::after {
-  content: "haee1";
+  counter-increment: x 1;
+  --y: calc( counter(x) + 0 );
+  counter-reset: z var(--y);
+  content: "haee" counter(z);
 }
 
 .button[ab="b"]:focus + div.main span.text::after {
