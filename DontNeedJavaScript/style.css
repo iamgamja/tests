@@ -24,7 +24,7 @@ input {
   border: 1px solid #ddd;
 }
 
-input[last] {
+input[fisrt] {
   clear: left;
 }
 
