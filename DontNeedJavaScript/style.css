@@ -31,7 +31,7 @@ div#main {
   margin: 0 auto;
 }
 
-:is(input, output)[first] {
+input[first] {
   clear: left;
 }
 
@@ -39,7 +39,7 @@ input[input-last] {
   margin-bottom: calc( var(--cell-size) * 3 );
 }
 
-input, output {
+input {
   -webkit-appearance: none;
   display: block;
   float: left;
