@@ -23,6 +23,10 @@ input[first] {
   clear: left;
 }
 
+input[result] {
+  margin-top: 30px;
+}
+
 input[type="checkbox"] {
   -webkit-appearance: none;
   display: block;
