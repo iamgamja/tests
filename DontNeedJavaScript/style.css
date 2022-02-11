@@ -1,6 +1,6 @@
 /* var */
 :root {
-  --cell-size: 10px;
+  --cell-size: 30px;
 }
 
 /* defalut */
@@ -20,6 +20,10 @@ body {
 }
 
 /* style */
+body {
+  padding: 50px;
+}
+
 input {
   border: 1px black solid;
 }
