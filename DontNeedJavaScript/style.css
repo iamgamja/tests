@@ -25,12 +25,16 @@ body {
   text-align: center;
 }
 
+input {
+  border: 1px solid #ddd;
+}
+
+input:nth-of-type(10n+1) { clear: left; }
+
 input[type="checkbox"] {
   -webkit-appearance: none;
   display: block;
   float: left;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
   padding: 0px 3px;
   margin: 0;
   font-size: 7pt;
