@@ -2,21 +2,4 @@
   /* 변수 초기화 */
   counter-reset: x 0;
 
-  counter-reset: nth-select; /* select 번호 초기화 */
-}
-
-select {
-  counter-increment: nth-select; /* select 번호 증가 */
-  counter-reset: nth-option; /* option 번호 초기화 */
-}
-
-option {
-  counter-increment: nth-option; /* option 번호 증가 */
-}
-
-option:checked::after {
-  position: fixed;
-  right: 20px;
-  top: 30px;
-  content: "hi";
 }
