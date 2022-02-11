@@ -1,6 +1,6 @@
 /* var */
 :root {
-  --cell-size: 25px;
+  --cell-size: 20px;
 }
 
 /* defalut */
@@ -44,7 +44,6 @@ input {
   width: var(--cell-size);
   height: var(--cell-size);
   margin: 0;
-  padding: 0px 3px;
   font-size: 7pt;
 }
 
