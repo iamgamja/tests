@@ -23,6 +23,7 @@ body {
 body {
   padding: 50px;
   text-align: center;
+  background: #777777;
 }
 
 div#main {
@@ -45,10 +46,10 @@ input {
   width: var(--cell-size);
   height: var(--cell-size);
   margin: 0;
-  border: 1px black solid;
-  font-size: 7pt;
+  border: 1px white solid;
 }
 
 input:checked {
-  background: black;
+  background: white;
+  box-shadow: 0 0 7px white, 0 0 10px white, 0 0 21px white, 0 0 42px white;
 }
