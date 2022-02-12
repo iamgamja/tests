@@ -112,7 +112,55 @@ input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+input, /* 5 14 */ {
+*+*+*+*+*+*+*+*+input, /* 5 14 */
+input:checked + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:checked:not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 16 */
+input:checked + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:checked + input:not(:checked):not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 17 */
+input:checked + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 18 */
+input:checked + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:not(:checked):not([first]) + input:checked:not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input /* 5 19 */ {
   background: white;
   box-shadow: var(--checked-box-shadow);
 }
