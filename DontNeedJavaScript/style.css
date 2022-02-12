@@ -48,6 +48,7 @@ input {
   height: var(--cell-size);
   margin: 0;
   border: 1px white solid;
+  cursor: pointer;
 }
 
 input:checked {
