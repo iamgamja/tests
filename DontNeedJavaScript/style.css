@@ -69,10 +69,17 @@ input[disabled] {
  * input에서 output으로 가려면 100번의 `*+`이 필요함.
  * 하지만 cell9에서 시작하므로 output의 5번으로 가기 위해서는 88번의 `*+`, 1번의 `+input`이 필요함.
  */
+/*
+ * a: 5가 켜져있고 나머지가 2개 켜져있음
+ * b: 5가 켜져있고 나머지가 3개 켜져있음
+ * c: 5가 꺼져있고 나머지가 3개 켜져있음
+ * abc의 경우에만 켜지고, 나머지 경우에는 꺼짐.
+ */
 
-input:checked + input:checked:not([first]) + input:checked:not([first]) + *+*+*+*+*+*+*+
-input:checked + input:checked:not([first]) + input:checked:not([first]) + *+*+*+*+*+*+*+
-input:checked + input:checked:not([first]) + input:checked:not([first]) +
+/* a */
+input:checked + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
@@ -81,7 +88,37 @@ input:checked + input:checked:not([first]) + input:checked:not([first]) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+input {
+*+*+*+*+*+*+*+*+input, /* 5 12 */
+input:checked + input:not(:checked):not([first]) + input:checked:not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 13 */
+input:checked + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:checked + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 14 */ {
   background: white;
   box-shadow: var(--checked-box-shadow);
 }
+
+/* b */
+/* todo */
+
+/* c */
+/* todo */
