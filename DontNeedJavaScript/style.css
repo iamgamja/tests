@@ -232,7 +232,7 @@ input:not(:checked) + input:not(:checked):not([first]) + input:checked:not([firs
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+input, /* 5 29 */ {
+*+*+*+*+*+*+*+*+input /* 5 29 */ {
   background: white;
   box-shadow: var(--checked-box-shadow);
 }
