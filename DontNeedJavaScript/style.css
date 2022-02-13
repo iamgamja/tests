@@ -232,7 +232,187 @@ input:not(:checked) + input:not(:checked):not([first]) + input:checked:not([firs
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+input /* 5 29 */ {
+*+*+*+*+*+*+*+*+input, /* 5 29 */
+input:not(:checked) + input:not(:checked):not([first]) + input:checked:not([first]) + *+*+*+*+*+*+*+
+input:checked + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 34 */
+input:not(:checked) + input:not(:checked):not([first]) + input:checked:not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:checked:not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 36 */
+input:not(:checked) + input:not(:checked):not([first]) + input:checked:not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:checked + input:not(:checked):not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 37 */
+input:not(:checked) + input:not(:checked):not([first]) + input:checked:not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 38 */
+input:not(:checked) + input:not(:checked):not([first]) + input:checked:not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:not(:checked):not([first]) + input:checked:not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 39 */
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:checked + input:checked:not([first]) + input:checked:not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 46 */
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:checked + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:checked + input:not(:checked):not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 47 */
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:checked + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 48 */
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:checked + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 49 */
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:checked:not([first]) + *+*+*+*+*+*+*+
+input:checked + input:not(:checked):not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 67 */
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:checked:not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 68 */
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:checked:not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:not(:checked):not([first]) + input:checked:not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 69 */
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:checked + input:checked:not([first]) + input:not(:checked):not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 78 */
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:checked + input:not(:checked):not([first]) + input:checked:not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input, /* 5 79 */
+input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
+input:not(:checked) + input:checked:not([first]) + input:checked:not([first]) +
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+*+*+
+*+*+*+*+*+*+*+*+input /* 5 89 */ {
   background: white;
   box-shadow: var(--checked-box-shadow);
 }
