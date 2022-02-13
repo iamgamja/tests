@@ -331,7 +331,7 @@ input:not(:checked) + input:checked:not([first]) + input:not(:checked):not([firs
 *+*+*+*+*+*+*+*+input, /* 5 48 */
 input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
 input:checked + input:checked:not([first]) + input:not(:checked):not([first]) + *+*+*+*+*+*+*+
-input:not(:checked) + input:not(:checked):not([first]) + input:not(:checked):not([first]) +
+input:not(:checked) + input:not(:checked):not([first]) + input:checked:not([first]) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
