@@ -15,13 +15,7 @@ html,body {
   box-sizing: border-box;
 }
 
-/* 3. font */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-body {
-  font-family: 'Noto Sans KR'
-}
-
-/* 4. main style */
+/* 3. main style */
 body {
   padding: 50px;
   text-align: center;
