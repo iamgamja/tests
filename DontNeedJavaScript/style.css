@@ -33,6 +33,10 @@ div#main {
   margin: 0 auto;
 }
 
+input[overflow] {
+  display: none;
+}
+
 input[first] {
   clear: left;
 }
