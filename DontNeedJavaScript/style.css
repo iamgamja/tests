@@ -68,6 +68,10 @@ input:checked {
   box-shadow: var(--checked-box-shadow);
 }
 
+input:not([output]):hover {
+  box-shadow: var(--checked-box-shadow);
+}
+
 input[disabled] {
   cursor: not-allowed;
 }
