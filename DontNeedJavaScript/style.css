@@ -28,18 +28,6 @@ div#main {
   margin: 0 auto;
 }
 
-input[overflow] {
-  display: none;
-}
-
-input[first] {
-  clear: left;
-}
-
-input[input-last] {
-  margin-bottom: calc( var(--cell-size) * 3 );
-}
-
 input {
   -webkit-appearance: none;
   display: block;
@@ -48,6 +36,27 @@ input {
   height: var(--cell-size);
   margin: 0;
   cursor: pointer;
+}
+
+input:checked {
+  background: var(--checked-background);
+  box-shadow: var(--checked-box-shadow);
+}
+
+input:not([output]):hover {
+  box-shadow: var(--checked-box-shadow);
+}
+
+input[overflow] {
+  display: none;
+}
+
+input[left] {
+  clear: left;
+}
+
+input[input-last] {
+  margin-bottom: calc( var(--cell-size) * 3 );
 }
 
 input {
@@ -61,15 +70,6 @@ input[bottom] {
 
 input[right] {
   border-right: var(--border-style);
-}
-
-input:checked {
-  background: var(--checked-background);
-  box-shadow: var(--checked-box-shadow);
-}
-
-input:not([output]):hover {
-  box-shadow: var(--checked-box-shadow);
 }
 
 input[disabled] {
