@@ -363,7 +363,11 @@ input:not(:checked) + input:checked       + input:checked       +
 *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input[output], /* 5 189 */
+*+*+*+*+*+*+*+*+*+*+input[output] /* 5 189 */ {
+  background: var(--checked-background);
+  box-shadow: var(--checked-box-shadow);
+}
+/* 끊기 */
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+
 input:checked       + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) +
@@ -468,7 +472,11 @@ input:not(:checked) + input:checked       + input:checked       +
 *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input[output], /* 5 289 */
+*+*+*+*+*+*+*+*+*+*+input[output] /* 5 289 */ {
+  background: var(--checked-background);
+  box-shadow: var(--checked-box-shadow);
+}
+/* 끊기 */
 input:not(:checked) + input:not(:checked) + input:checked       + *+*+*+*+*+*+*+*+*+
 input:checked       + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) +
@@ -760,7 +768,11 @@ input:not(:checked) + input:checked       + input:checked       +
 *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input[output], /* 189 */
+*+*+*+*+*+*+*+*+*+*+input[output] /* 189 */ {
+  background: var(--checked-background);
+  box-shadow: var(--checked-box-shadow);
+}
+/* 끊기 */
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+
 input:checked       + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) +
@@ -865,7 +877,11 @@ input:not(:checked) + input:checked       + input:checked       +
 *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input[output], /* 289 */
+*+*+*+*+*+*+*+*+*+*+input[output] /* 289 */ {
+  background: var(--checked-background);
+  box-shadow: var(--checked-box-shadow);
+}
+/* 끊기 */
 input:not(:checked) + input:not(:checked) + input:checked       + *+*+*+*+*+*+*+*+*+
 input:checked       + input:not(:checked) + input:checked       + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) +
