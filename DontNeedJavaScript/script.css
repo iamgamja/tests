@@ -464,7 +464,7 @@ input:not(:checked) + input:checked:not([first])       + input:checked:not([firs
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+input /* 5 89 */ {
-  background: white;
+  background: var(--checked-background);
   box-shadow: var(--checked-box-shadow);
 }
 

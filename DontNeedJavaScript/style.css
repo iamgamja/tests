@@ -2,6 +2,7 @@
 :root {
   --cell-size: 20px;
   --border-style: 1px white solid;
+  --checked-background: white;
   --checked-box-shadow: 0 0 7px white, 0 0 10px white, 0 0 21px white, 0 0 42px white;
 }
 
@@ -63,7 +64,7 @@ input[right] {
 }
 
 input:checked {
-  background: white;
+  background: var(--checked-background);
   box-shadow: var(--checked-box-shadow);
 }
 
