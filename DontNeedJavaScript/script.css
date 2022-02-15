@@ -31,7 +31,7 @@ input:not(:checked) + input:not(:checked) + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 12 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 12 */
 input:checked       + input:not(:checked) + input:checked       + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) +
@@ -47,7 +47,7 @@ input:not(:checked) + input:not(:checked) + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 13 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 13 */
 input:checked       + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:checked       + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) +
@@ -63,7 +63,7 @@ input:not(:checked) + input:not(:checked) + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 14 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 14 */
 input:checked       + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) +
@@ -79,7 +79,7 @@ input:not(:checked) + input:not(:checked) + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 16 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 16 */
 input:checked       + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:checked       + input:not(:checked) + input:not(:checked) +
@@ -95,7 +95,7 @@ input:checked       + input:not(:checked) + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 17 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 17 */
 input:checked       + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) +
@@ -111,7 +111,7 @@ input:not(:checked) + input:checked       + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 18 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 18 */
 input:checked       + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:checked       +
@@ -127,7 +127,7 @@ input:not(:checked) + input:not(:checked) + input:checked       +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 19 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 19 */
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) +
@@ -143,7 +143,7 @@ input:not(:checked) + input:not(:checked) + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 23 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 23 */
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:checked       + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) +
@@ -159,7 +159,7 @@ input:not(:checked) + input:not(:checked) + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 24 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 24 */
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) +
@@ -175,7 +175,7 @@ input:not(:checked) + input:not(:checked) + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 26 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 26 */
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:checked       + input:not(:checked) + input:not(:checked) +
@@ -191,7 +191,7 @@ input:checked       + input:not(:checked) + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 27 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 27 */
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) +
@@ -207,7 +207,7 @@ input:not(:checked) + input:checked       + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 28 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 28 */
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:checked       +
@@ -223,7 +223,7 @@ input:not(:checked) + input:not(:checked) + input:checked       +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 29 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 29 */
 input:not(:checked) + input:not(:checked) + input:checked       + *+*+*+*+*+*+*+*+*+
 input:checked       + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) +
@@ -239,7 +239,7 @@ input:not(:checked) + input:not(:checked) + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 34 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 34 */
 input:not(:checked) + input:not(:checked) + input:checked       + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) +
@@ -255,7 +255,7 @@ input:not(:checked) + input:not(:checked) + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 36 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 36 */
 input:not(:checked) + input:not(:checked) + input:checked       + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:checked       + input:not(:checked) + input:not(:checked) +
@@ -271,7 +271,7 @@ input:checked       + input:not(:checked) + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 37 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 37 */
 input:not(:checked) + input:not(:checked) + input:checked       + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) +
@@ -287,7 +287,7 @@ input:not(:checked) + input:checked       + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 38 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 38 */
 input:not(:checked) + input:not(:checked) + input:checked       + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:checked       +
@@ -303,7 +303,7 @@ input:not(:checked) + input:not(:checked) + input:checked       +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 39 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 39 */
 input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:checked       + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) +
@@ -319,7 +319,7 @@ input:not(:checked) + input:not(:checked) + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 46 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 46 */
 input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:checked       + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:checked       + input:not(:checked) + input:not(:checked) +
@@ -335,7 +335,7 @@ input:checked       + input:not(:checked) + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 47 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 47 */
 input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:checked       + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) +
@@ -351,7 +351,7 @@ input:not(:checked) + input:checked       + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 48 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 48 */
 input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:checked       + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:checked       +
@@ -367,7 +367,7 @@ input:not(:checked) + input:not(:checked) + input:checked       +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 49 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 49 */
 input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+
 input:checked       + input:not(:checked) + input:not(:checked) +
@@ -383,7 +383,7 @@ input:checked       + input:not(:checked) + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 67 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 67 */
 input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) +
@@ -399,7 +399,7 @@ input:not(:checked) + input:checked       + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 68 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 68 */
 input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:checked       +
@@ -415,7 +415,7 @@ input:not(:checked) + input:not(:checked) + input:checked       +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 69 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 69 */
 input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:checked       + input:checked       + input:not(:checked) +
@@ -431,7 +431,7 @@ input:checked       + input:checked       + input:not(:checked) +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 78 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 78 */
 input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:checked       + input:not(:checked) + input:checked       +
@@ -447,7 +447,7 @@ input:checked       + input:not(:checked) + input:checked       +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input, /* 5 79 */
+*+*+*+*+*+*+*+*+*+*+input[output], /* 5 79 */
 input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:checked       +
@@ -463,7 +463,7 @@ input:not(:checked) + input:checked       + input:checked       +
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
 *+*+*+*+*+*+*+*+*+*+
-*+*+*+*+*+*+*+*+*+*+input /* 5 89 */ {
+*+*+*+*+*+*+*+*+*+*+input[output] /* 5 89 */ {
   background: var(--checked-background);
   box-shadow: var(--checked-box-shadow);
 }
