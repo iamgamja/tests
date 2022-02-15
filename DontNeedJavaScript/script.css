@@ -128,8 +128,8 @@ input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
   input /* 5 89 */ {
-  background: var(--checked-background);
-  box-shadow: var(--checked-box-shadow);
+  background: var(--outputs-background);
+  box-shadow: var(--outputs-box-shadow);
 }
 
 /* b */
@@ -217,8 +217,8 @@ input:checked       + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
   input /* 5 189 */ {
-  background: var(--checked-background);
-  box-shadow: var(--checked-box-shadow);
+  background: var(--outputs-background);
+  box-shadow: var(--outputs-box-shadow);
 }
 /* 끊기 */
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+
@@ -281,8 +281,8 @@ input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
   input /* 5 289 */ {
-  background: var(--checked-background);
-  box-shadow: var(--checked-box-shadow);
+  background: var(--outputs-background);
+  box-shadow: var(--outputs-box-shadow);
 }
 /* 끊기 */
 input:not(:checked) + input:not(:checked) + input:checked       + *+*+*+*+*+*+*+*+*+
@@ -365,8 +365,8 @@ input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:checked       + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
   input /* 5 789 */ {
-  background: var(--checked-background);
-  box-shadow: var(--checked-box-shadow);
+  background: var(--outputs-background);
+  box-shadow: var(--outputs-box-shadow);
 }
 
 /* c */
@@ -454,8 +454,8 @@ input:checked       + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
   input /* 189 */ {
-  background: var(--checked-background);
-  box-shadow: var(--checked-box-shadow);
+  background: var(--outputs-background);
+  box-shadow: var(--outputs-box-shadow);
 }
 /* 끊기 */
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+
@@ -518,8 +518,8 @@ input:not(:checked) + input:checked       + input:not(:checked) + *+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:not(:checked) + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
   input /* 289 */ {
-  background: var(--checked-background);
-  box-shadow: var(--checked-box-shadow);
+  background: var(--outputs-background);
+  box-shadow: var(--outputs-box-shadow);
 }
 /* 끊기 */
 input:not(:checked) + input:not(:checked) + input:checked       + *+*+*+*+*+*+*+*+*+
@@ -602,6 +602,6 @@ input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+
 input:not(:checked) + input:not(:checked) + input:not(:checked) + *+*+*+*+*+*+*+*+*+
 input:checked       + input:checked       + input:checked       + *+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+*+
   input /* 789 */ {
-  background: var(--checked-background);
-  box-shadow: var(--checked-box-shadow);
+  background: var(--outputs-background);
+  box-shadow: var(--outputs-box-shadow);
 }

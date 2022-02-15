@@ -4,6 +4,8 @@
   --border-style: 1px white solid;
   --checked-background: white;
   --checked-box-shadow: 0 0 7px white, 0 0 10px white, 0 0 21px white, 0 0 42px white;
+  --outputs-background: lightgray;
+  --outputs-box-shadow: 0 0 7px lightgray, 0 0 10px lightgray, 0 0 21px lightgray, 0 0 42px lightgray;
 }
 
 /* 2. defalut style */
