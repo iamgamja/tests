@@ -44,7 +44,7 @@ input:checked {
   box-shadow: var(--checked-box-shadow);
 }
 
-input:not([output]):hover {
+input:hover {
   box-shadow: var(--checked-box-shadow);
 }
 
@@ -56,7 +56,7 @@ input[left] {
   clear: left;
 }
 
-input[input-last] {
+input[last] {
   margin-bottom: calc( var(--cell-size) * 3 );
 }
 
