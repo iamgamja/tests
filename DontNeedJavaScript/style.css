@@ -41,12 +41,12 @@ input {
   transition-duration: 0.1s;
 }
 
-input:checked {
+#main input:checked {
   background: var(--checked-background);
   box-shadow: var(--checked-box-shadow);
 }
 
-input:hover {
+#main input:hover {
   box-shadow: var(--checked-box-shadow);
 }
 
