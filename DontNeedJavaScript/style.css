@@ -26,21 +26,13 @@ body {
 
 /* 4. main style */
 body {
-  padding: 50px;
   text-align: center;
   background: dimgray;
 }
 
-#title {
-  display: block;
-  position: fixed;
-  text-align: center;
-  top: 10px;
-}
-
 div#main {
   display: inline-block;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 input {
