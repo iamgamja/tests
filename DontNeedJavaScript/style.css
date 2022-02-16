@@ -31,8 +31,6 @@ body {
 }
 
 div#title {
-  display: inline-block;
-  position: fixed;
   color: white;
   font-size: 30px;
 }
