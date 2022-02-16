@@ -30,6 +30,12 @@ body {
   background: dimgray;
 }
 
+div#title {
+  display: fixed;
+  color: white;
+  font-size: 30px;
+}
+
 div#main {
   display: inline-block;
   margin: 50px auto;
