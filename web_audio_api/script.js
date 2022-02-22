@@ -13,7 +13,8 @@ function main() {
   const audioCtx = new AudioContext();
   
   const analyser = audioCtx.createAnalyser(); // '효과'
-  
+
+  const audioElement = document.querySelector('audio');
   const source = audioCtx.createMediaElementSource(audioElement); // <audio>
   
   source.connect(analyser); // <audio> - '효과' 연결
