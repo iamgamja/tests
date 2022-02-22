@@ -8,6 +8,5 @@ html, body {
 
 canvas {
   display: block;
-  background-color: #222222;
   margin: 30px auto;
 }
