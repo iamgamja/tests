@@ -19,6 +19,24 @@ function main() {
   
   source.connect(analyser); // <audio> - '효과' 연결
 
+  source.connect(audioCtx.destination);
+
+  $('button').on('click', function() { // 버튼 클릭으로 재생/정지
+    // 컨텍스트가 연기된(suspended) 상태에 있는지 검사합니다 (자동 재생 정책)
+    if (audioContext.state === 'suspended') {
+        audioContext.resume();
+    }
+
+    // 상태에 따라 트랙을 재생하거나 정지합니다
+    if (this.dataset.playing === 'false') {
+        audioElement.play();
+        this.dataset.playing = 'true';
+    } else if (this.dataset.playing === 'true') {
+        audioElement.pause();
+        this.dataset.playing = 'false';
+    }
+  });
+
   analyser.fftSize = 2048;
   let bufferLength = analyser.frequencyBinCount;
   let dataArray = new Uint8Array(bufferLength);
