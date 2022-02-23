@@ -26,10 +26,10 @@ $('input').addEventListener('change', function() {
     // 상태에 따라 트랙을 재생하거나 정지합니다
     if (this.dataset.playing === 'false') {
         audioElement.play();
-        this.dataset.playing = 'true';
+        this.setAttribute('playing', 'true');
     } else if (this.dataset.playing === 'true') {
         audioElement.pause();
-        this.dataset.playing = 'false';
+        this.setAttribute('playing', 'false');
     }
   });
 
