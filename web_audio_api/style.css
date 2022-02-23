@@ -22,16 +22,16 @@ canvas {
   border: 1px black solid;
 }
 
-button[playing="true"]::after {
+button[playing="true"]::before {
   content: "⏸";
 }
-button[playing="true"]::before {
+button[playing="true"]::after {
   content: "Pause";
 }
 
-button[playing="false"]::after {
+button[playing="false"]::before {
   content: "▶";
 }
-button[playing="false"]::before {
+button[playing="false"]::after {
   content: "Play";
 }
