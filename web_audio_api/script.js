@@ -14,7 +14,8 @@ document.querySelector('input').addEventListener('change', function() {
 
   source.connect(audioCtx.destination);
 
-  $('button').on('click', function() { // 버튼 클릭으로 재생/정지
+  // 버튼 클릭으로 재생/정지
+  document.querySelector('button').addEventListener(function() {
     // 컨텍스트가 연기된(suspended) 상태에 있는지 검사합니다 (자동 재생 정책)
     if (audioCtx.state === 'suspended') {
         audioCtx.resume();
@@ -34,13 +35,11 @@ document.querySelector('input').addEventListener('change', function() {
   let bufferLength = analyser.frequencyBinCount;
   let dataArray = new Uint8Array(bufferLength);
 
-  // analyser.getByteTimeDomainData(dataArray);
-
   let canvas = document.querySelector('canvas');
   let canvasCtx = canvas.getContext('2d');
 
-  const WIDTH = 300;
-  const HEIGHT = 150;
+  const WIDTH = canvas.width;
+  const HEIGHT = canvas.height;
 
   canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
