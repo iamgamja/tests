@@ -21,3 +21,17 @@ canvas {
   background-color: rgb(200, 200, 200);
   border: 1px black solid;
 }
+
+button[playing="true"]::after {
+  content: "⏸";
+}
+button[playing="true"]::before {
+  content: "Pause";
+}
+
+button[playing="false"]::after {
+  content: "▶";
+}
+button[playing="false"]::before {
+  content: "Play";
+}
