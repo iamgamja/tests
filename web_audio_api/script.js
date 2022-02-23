@@ -22,6 +22,7 @@ document.querySelector('input').addEventListener('change', function() {
     }
 
     // 상태에 따라 트랙을 재생하거나 정지합니다
+    /* D */ console.log(this.getAttribute('playing'));
     if (this.getAttribute('playing') === 'false') {
         audioElement.play();
         this.setAttribute('playing', 'true');
@@ -76,7 +77,6 @@ document.querySelector('input').addEventListener('change', function() {
     }
 
     // 선 끝내기
-    canvasCtx.lineTo(canvas.width, canvas.height/2);
     canvasCtx.stroke();
   }
   draw(); // 루프 시작
