@@ -25,8 +25,10 @@ document.querySelector('input').addEventListener('change', function() {
   
     if (audioElement.paused) {
       audioElement.play();
+      document.querySelector('button').innerText = '⏸ Pause';
     } else {
       audioElement.pause();
+      document.querySelector('button').innerText = '▶ Play';
     }
   });
   
