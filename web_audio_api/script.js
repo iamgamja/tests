@@ -1,15 +1,8 @@
-$(() => {
-  
-  $('input').on('change', function(){
-    $('audio').attr('src', URL.createObjectURL(this.files[0]));
-    main();
-  });
-  
-});
+document.querySelector('input').addEventListener('change', function() {
+  // audio src set
+  document.querySelector('audio').setAttribute('src', URL.createObjectURL(this.files[0]));
 
-
-function main() {
-  
+  // main
   const audioCtx = new AudioContext();
   
   const analyser = audioCtx.createAnalyser(); // '효과'
@@ -23,8 +16,8 @@ function main() {
 
   $('button').on('click', function() { // 버튼 클릭으로 재생/정지
     // 컨텍스트가 연기된(suspended) 상태에 있는지 검사합니다 (자동 재생 정책)
-    if (audioContext.state === 'suspended') {
-        audioContext.resume();
+    if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
     }
 
     // 상태에 따라 트랙을 재생하거나 정지합니다
@@ -88,4 +81,4 @@ function main() {
   }
   draw(); // 루프 시작
 
-}
+});
