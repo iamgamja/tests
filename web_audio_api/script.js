@@ -3,6 +3,7 @@ document.querySelector('input').addEventListener('change', function() {
   document.querySelector('audio').setAttribute('src', URL.createObjectURL(this.files[0]));
   
   document.querySelector('button').removeAttribute('disable');
+  document.querySelector('button').innerText = '▶ Play';
   
   // main
   const audioCtx = new AudioContext();
