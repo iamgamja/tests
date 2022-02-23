@@ -22,11 +22,10 @@ document.querySelector('input').addEventListener('change', function() {
     }
 
     // 상태에 따라 트랙을 재생하거나 정지합니다
-    /* D */ console.log(this.getAttribute('playing'), typeof this.getAttribute('playing'), this.getAttribute('playing') === 'true');
     if (this.getAttribute('playing') === 'false') {
         audioElement.play();
         this.setAttribute('playing', 'true');
-    } else if (this.getAttribute('plyaing') === 'true') {
+    } else if (this.getAttribute('playing') === 'true') {
         audioElement.pause();
         this.setAttribute('playing', 'false');
     }
