@@ -1,13 +1,15 @@
-document.querySelector('input').addEventListener('change', function() {
+const $ = document.querySelector;
+
+$('input').addEventListener('change', function() {
   // audio src set
-  document.querySelector('audio').setAttribute('src', URL.createObjectURL(this.files[0]));
+  $('audio').setAttribute('src', URL.createObjectURL(this.files[0]));
 
   // main
   const audioCtx = new AudioContext();
   
   const analyser = audioCtx.createAnalyser(); // '효과'
 
-  const audioElement = document.querySelector('audio');
+  const audioElement = $('audio');
   const source = audioCtx.createMediaElementSource(audioElement); // <audio>
   
   source.connect(analyser); // <audio> - '효과' 연결
@@ -15,7 +17,7 @@ document.querySelector('input').addEventListener('change', function() {
   source.connect(audioCtx.destination);
 
   // 버튼 클릭으로 재생/정지
-  document.querySelector('button').addEventListener('click', function() {
+  $('button').addEventListener('click', function() {
     // 컨텍스트가 연기된(suspended) 상태에 있는지 검사합니다 (자동 재생 정책)
     if (audioCtx.state === 'suspended') {
         audioCtx.resume();
@@ -31,11 +33,15 @@ document.querySelector('input').addEventListener('change', function() {
     }
   });
 
+  audioElement.addEventListener('ended', function() {
+    $('button').setAttribute('playing', 'false');
+  })
+
   analyser.fftSize = 2048;
   const bufferLength = analyser.frequencyBinCount;
   const dataArray = new Uint8Array(bufferLength);
 
-  const canvas = document.querySelector('canvas');
+  const canvas = $('canvas');
   const canvasCtx = canvas.getContext('2d');
 
   canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
