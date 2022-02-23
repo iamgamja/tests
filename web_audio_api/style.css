@@ -5,9 +5,9 @@ html, body {
 }
 
 /* 모든 요소의 크기를 여백포함으로 계산 */
-/* * {
+* {
   box-sizing: border-box;
-} */
+}
 
 /* 모두 가운데 정렬 */
 body {
