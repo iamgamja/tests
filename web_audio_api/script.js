@@ -15,7 +15,7 @@ document.querySelector('input').addEventListener('change', function() {
   source.connect(audioCtx.destination);
 
   // 버튼 클릭으로 재생/정지
-  document.querySelector('button').addEventListener(function() {
+  document.querySelector('button').addEventListener('click', function() {
     // 컨텍스트가 연기된(suspended) 상태에 있는지 검사합니다 (자동 재생 정책)
     if (audioCtx.state === 'suspended') {
         audioCtx.resume();
