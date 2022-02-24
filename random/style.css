@@ -25,5 +25,5 @@ input[type="number"] {
 }
 
 label, input {
-  margin: 0; /* mvp 재설정 */
+  margin: 0 !important; /* mvp 재설정 */
 }
