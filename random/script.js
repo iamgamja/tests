@@ -51,5 +51,5 @@ $('#b3').on('click', function() {
     result += r;
   }
 
-  $('#o2').val(result);
+  $('#o3').val(result);
 });
