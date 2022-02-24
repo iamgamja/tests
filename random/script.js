@@ -37,3 +37,21 @@ $('#b2').on('click', function() {
 
   $('#o2').val(result);
 });
+
+$('#b3').on('click', function() {
+  let result = 0;
+
+  for (let i=0; i<$('#i3-l').val(); i++) {
+    const r = randInt(
+      1,
+      $('#i3-r').val(),
+      true,
+      true,
+    );
+    result += r;
+  }
+
+  const result = $('#i2').val() >= r;
+
+  $('#o2').val(result);
+});
