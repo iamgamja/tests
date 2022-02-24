@@ -51,7 +51,5 @@ $('#b3').on('click', function() {
     result += r;
   }
 
-  const result = $('#i2').val() >= r;
-
   $('#o2').val(result);
 });
