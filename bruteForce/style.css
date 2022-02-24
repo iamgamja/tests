@@ -1,0 +1,37 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 모든 요소의 크기를 여백포함으로 계산 */
+* {
+  box-sizing: border-box;
+}
+
+/* 모두 가운데 정렬 */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body > * {
+  display: flex;
+  align-items: center;
+}
+
+/* mvp 재설정 */
+label, input {
+  margin: 0 !important;
+}
+
+input[type="number"] {
+  width: 100px !important;
+}
+
+button {
+  padding: 0 0.5rem !important;
+}
+
+/* main */
+/* ... */
