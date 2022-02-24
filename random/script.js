@@ -35,5 +35,5 @@ $('#b2').on('click', function() {
 
   const result = $('#i2').val() >= r;
 
-  $('#o1').val(result);
+  $('#o2').val(result);
 });
