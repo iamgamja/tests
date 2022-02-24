@@ -41,7 +41,7 @@ $('#b2').on('click', function() {
 $('#b3').on('click', function() {
   let result = 0;
 
-  for (let i=0; i<$('#i3-l').val(); i++) {
+  for (let i=0; i < $('#i3-l').val(); i++) {
     const r = randInt(
       1,
       $('#i3-r').val(),
