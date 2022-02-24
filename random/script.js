@@ -33,7 +33,7 @@ $('#b2').on('click', function() {
     true,
   );
 
-  const result = $('#i2').val() >= result;
+  const result = $('#i2').val() >= r;
 
   $('#o1').val(result);
 });
