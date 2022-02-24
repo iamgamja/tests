@@ -18,8 +18,8 @@ $('#b1').on('click', function() {
   const r = randInt(
     $('#i1-l').val(),
     $('#i1-r').val(),
-    $('#c1-l').val(),
-    $('#c1-r').val(),
+    $('#c1-l').is(':checked'),
+    $('#c1-r').is(':checked'),
   );
 
   $('#o1').val(r);
