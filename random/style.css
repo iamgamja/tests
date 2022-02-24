@@ -26,11 +26,11 @@ label, input {
 }
 
 input[type="number"] {
-  width: 100px;
+  width: 100px !important;
 }
 
 button {
-  padding: 0 0.5rem;
+  padding: 0 0.5rem !important;
 }
 
 /* main */
