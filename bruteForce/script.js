@@ -23,7 +23,7 @@ $('button').on('click', async function() {
       if (checks[0] <= p) {
         $('progress').attr('value', p);
         checks.shift();
-        await sleep(100);
+        await sleep(20);
       }
     }
   }
