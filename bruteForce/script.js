@@ -11,7 +11,7 @@ $('button').on('click', function() {
       $('output').val(i);
       return;
     } else {
-      $('progress').attr('value', (i-start+1) / (end-start+1));
+      $('progress').attr('value', i-start+1);
     }
   }
 });
