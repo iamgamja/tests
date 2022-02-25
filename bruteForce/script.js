@@ -13,6 +13,8 @@ $('button').on('click', async function() {
 
   const checks = [...Array(100).keys()].map(i => total/100*i);
 
+  $('output').val('Processing...');
+
   for (let i = start; i <= end; i++) {
     if (F(i)) {
       $('output').val(i);
