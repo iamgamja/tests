@@ -8,17 +8,28 @@ $('button').on('click', async function() {
 
   const total = end-start+1;
 
+  let findCount = $('#findCount').val();
+
   $('progress').attr('max', total);
+  $('#totalCount').text(total);
+
   $('progress').attr('value', 0);
+  $('#resultCount').text(0);
+
 
   const checks = [...Array(100).keys()].map(i => total/100*i);
 
-  $('output').val('Processing...');
+  $('#result').val('');
 
   for (let i = start; i <= end; i++) {
     if (F(i)) {
-      $('output').val(i);
-      return;
+      if (findCount) {
+        $('#result').val( $('#result').val() + ' ' + i );
+        $('#resultCount').text( +$('#resultCount').text() + 1 );
+        findCount--;
+      } else {
+        return;
+      }
     } else {
       const p = i-start+1;
       if (checks[0] <= p) {
@@ -28,5 +39,5 @@ $('button').on('click', async function() {
       }
     }
   }
-  $('output').val("Can't find.");
+  // $('#result').val("Can't find.");
 });

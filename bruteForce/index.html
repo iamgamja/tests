@@ -12,11 +12,15 @@
   
   <body>
     <div>
-      <code>N</code> from <input type="number" id="start"> to <input type="number" id="end">
+      <code>N</code> from <input type="number" id="start" autofocus> to <input type="number" id="end">
     </div>
 
     <div>
-      <textarea cols="30" rows="10" placeholder="JavaScript Code Here!\n"></textarea>
+      Find <input type="number" id="findCount">
+    </div>
+
+    <div>
+      <textarea cols="30" rows="10" placeholder="JavaScript Code Here!"></textarea>
     </div>
 
     <div>
@@ -26,9 +30,13 @@
     <div>
       <progress max value></progress>
     </div>
-    
+
     <div>
-      <output></output>
+      <output id="result"></output>
+    </div>
+
+    <div>
+      <span id="resultCount"></span> / <span id="totalCount"></span>
     </div>
 
   </body>
