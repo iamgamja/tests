@@ -11,6 +11,8 @@ $('button').on('click', async function() {
   $('progress').attr('max', total);
   $('progress').attr('value', 0);
 
+  const checks = [...Array(100).keys()].map(i => total/100*i);
+
   for (let i = start; i <= end; i++) {
     if (F(i)) {
       $('output').val(i);
@@ -18,8 +20,9 @@ $('button').on('click', async function() {
       return;
     } else {
       const p = i-start+1;
-      if (total/10 <= p && p <= total/10+1) {
+      if (checks[0] <= p) {
         $('progress').attr('value', p);
+        checks.shift();
         await sleep(100);
       }
     }
