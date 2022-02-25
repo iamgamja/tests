@@ -16,15 +16,15 @@ $('button').on('click', async function() {
   for (let i = start; i <= end; i++) {
     if (F(i)) {
       $('output').val(i);
-      $('progress').attr('value', total);
       return;
     } else {
       const p = i-start+1;
       if (checks[0] <= p) {
         $('progress').attr('value', p);
         checks.shift();
-        await sleep(20);
+        await sleep(2);
       }
     }
   }
+  $('output').val("Can't find.");
 });
