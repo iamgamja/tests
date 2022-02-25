@@ -1,6 +1,6 @@
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
-$('button').on('click', function() {
+$('button').on('click', async function() {
   const F = new Function( 'N', $('textarea').val() );
   
   const start = +$('#start').val();
