@@ -6,12 +6,9 @@ const Engine = Matter.Engine,
     Composite = Matter.Composite;
 
 // create an engine
-let engine = Engine.create({
-  gravity: {
-    x: 0,
-    y: 0
-  }
-});
+let engine = Engine.create();
+engine.gravity.x = 0;
+engine.gravity.y = 0;
 
 // create a renderer
 let render = Render.create({
