@@ -48,6 +48,11 @@ class Player {
     });
   }
 
+  W() { this.y -= HEIGHT; }
+  A() { this.x -= WIDTH; }
+  S() { this.y += HEIGHT; }
+  D() { this.x += WIDTH; }
+
   init() {
     if (!(0 <= this.x && this.x < canvas.width)) {
       this.x %= canvas.width;
@@ -65,16 +70,16 @@ const player = new Player(0, 0);
 document.addEventListener('keydown', function(e) {
   switch (e.code) {
     case 'ArrowUp': {
-      player.y -= HEIGHT;
+      player.W();
       break;
     } case 'ArrowLeft': {
-      player.x -= WIDTH;
+      player.A();
       break;
     } case 'ArrowDown': {
-      player.y += HEIGHT;
+      player.S();
       break;
     } case 'ArrowRight': {
-      player.x += WIDTH;
+      player.D();
       break;
     }
   }
