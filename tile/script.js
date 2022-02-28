@@ -120,11 +120,11 @@ setInterval(function() {
 
 function tickFn() {
   requestAnimationFrame(tickFn);
-
+  
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  player.draw();
-
+  
   tails.forEach(e => e.draw());
+  
+    player.draw();
 }
 const tick = requestAnimationFrame(tickFn);
