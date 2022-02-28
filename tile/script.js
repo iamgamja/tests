@@ -16,7 +16,7 @@ const ctx = canvas.getContext('2d');
  * @param {object.<string, any>} tmp.styles - ctx[key] = value;
  */
 function DRAW({x, y, w, h, styles}) {
-  styles.map(([key, value]) => {
+  Object.entries(styles).map(([key, value]) => {
     ctx[key] = value;
   });
 
@@ -56,3 +56,4 @@ function tick() {
 
   player.draw();
 }
+tick();
