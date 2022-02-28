@@ -53,10 +53,10 @@ class BaseEntity {
     });
   }
   
-  W() { this.y -= HEIGHT; }
-  A() { this.x -= WIDTH; }
-  S() { this.y += HEIGHT; }
-  D() { this.x += WIDTH; }
+  W() { this.y -= this.speed; }
+  A() { this.x -= this.speed; }
+  S() { this.y += this.speed; }
+  D() { this.x += this.speed; }
 
   init() {
     if (!(0 <= this.x && this.x < canvas.width)) {
@@ -76,8 +76,9 @@ class Player extends BaseEntity {
    * @param {number} [x=0]
    * @param {number} [y=0]
    * @param {*} [color='green']
+   * @param {number} [speed=5]
    */
-  constructor(x=0, y=0, color='green') {
+  constructor(x=0, y=0, color='green', speed=5) {
     super(x, y, color);
   }
 }
@@ -94,7 +95,7 @@ setInterval(function() {
   if (pressed.ArrowLeft) player.A();
   if (pressed.ArrowDown) player.S();
   if (pressed.ArrowRight) player.D();
-}, 50);
+}, 10);
 
 function tickFn() {
   requestAnimationFrame(tickFn);
