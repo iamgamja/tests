@@ -29,8 +29,9 @@ class BaseEntity {
    * @param {number} [x=0]
    * @param {number} [y=0]
    * @param {*} [color='black']
+   * @param {number} [speed=5]
    */
-  constructor(x=0, y=0, color='black') {
+  constructor(x=0, y=0, color='black', speed=5) {
     this.x = x;
     this.y = y;
     this.color = color;
@@ -79,7 +80,7 @@ class Player extends BaseEntity {
    * @param {number} [speed=5]
    */
   constructor(x=0, y=0, color='green', speed=5) {
-    super(x, y, color);
+    super(...arguments);
   }
 }
 
