@@ -78,7 +78,7 @@ class Player extends BaseEntity {
 }
 
 // main
-const player = new Player({x: 250, y: 250});
+const player = new Player(250, 250);
 
 const pressed = {};
 document.addEventListener('keydown', e => { pressed[e.code] = true });
