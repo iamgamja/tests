@@ -32,9 +32,11 @@ class Player {
   constructor(x, y) {
     this.x = x;
     this.y = y;
+    this.init();
   }
   
   draw() {
+    this.init();
     DRAW({
       x: this.x,
       y: this.y,
