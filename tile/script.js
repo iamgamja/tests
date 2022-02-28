@@ -105,7 +105,7 @@ document.addEventListener('keydown', e => { pressed[e.code] = true });
 document.addEventListener('keyup', e => { pressed[e.code] = false });
 
 setInterval(function() {
-  if (pressed.ArrowUp && pressed.ArrowLeft && pressed.ArrowDown && pressed.ArrowRight) {
+  if (pressed.ArrowUp || pressed.ArrowLeft || pressed.ArrowDown && pressed.ArrowRight) {
     const lastx = player.x;
     const lasty = player.y;
 
@@ -115,7 +115,6 @@ setInterval(function() {
     if (pressed.ArrowRight) player.D();
 
     tails.push(new Tail(lastx, lasty));
-
   }
 }, 10);
 
@@ -125,7 +124,7 @@ function tickFn() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   player.draw();
-  
+
   tails.forEach(e => e.draw());
 }
 const tick = requestAnimationFrame(tickFn);
