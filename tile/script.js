@@ -25,13 +25,13 @@ function DRAW({x, y, w, h, styles}) {
 
 class BaseEntity {
   /**
-   * 
-   * @param {number} [x=0]
-   * @param {number} [y=0]
-   * @param {*} [color='black']
-   * @param {number} [speed=5]
+   * @param {object} tmp
+   * @param {number} [tmp.x=0]
+   * @param {number} [tmp.y=0]
+   * @param {*} [tmp.color='black']
+   * @param {number} [tmp.speed=5]
    */
-  constructor(x=0, y=0, color='black', speed=5) {
+  constructor({x=0, y=0, color='black', speed=5}) {
     this.x = x;
     this.y = y;
     this.color = color;
@@ -72,14 +72,7 @@ class BaseEntity {
 }
 
 class Player extends BaseEntity {
-  /**
-   * 
-   * @param {number} [x=0]
-   * @param {number} [y=0]
-   * @param {*} [color='green']
-   * @param {number} [speed=5]
-   */
-  constructor(x=0, y=0, color='green', speed=5) {
+  constructor({color='green'}) {
     super(...arguments);
   }
 }
