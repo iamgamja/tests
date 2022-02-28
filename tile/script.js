@@ -23,7 +23,7 @@ function DRAW({x, y, w, h, styles}) {
   ctx.fillRect(x, y, w, h);
 }
 
-class BaseNPC {
+class BaseEntity {
   /**
    * 
    * @param {number} [x=0]
@@ -68,10 +68,9 @@ class BaseNPC {
       if (this.y < 0) this.y += canvas.height;
     }
   }
-
 }
 
-class Player extends BaseNPC {
+class Player extends BaseEntity {
   /**
    * 
    * @param {number} [x=0]
@@ -79,11 +78,29 @@ class Player extends BaseNPC {
    * @param {*} [color='green']
    */
   constructor(x=0, y=0, color='green') {
-    super();
+    super(x, y, color);
   }
 }
 
-const player = new Player();
+class Enemy extends BaseEntity {
+  /**
+   * 
+   * @param {number} [x=0]
+   * @param {number} [y=0]
+   * @param {*} [color='green']
+   */
+  constructor(x=0, y=0, color='red') {
+    super(x, y, color);
+  }
+}
+
+
+// main
+const player = new Player(250, 250);
+
+const enemies = [
+  new Enemy(100, 50),
+]
 
 document.addEventListener('keydown', function(e) {
   switch (e.code) {
@@ -104,11 +121,14 @@ document.addEventListener('keydown', function(e) {
   player.init();
 });
 
+
+
 function tickFn() {
   requestAnimationFrame(tickFn);
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   player.draw();
+  enemies.forEach(e => e.draw());
 }
 const tick = requestAnimationFrame(tickFn);
