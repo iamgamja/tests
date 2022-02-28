@@ -1,7 +1,7 @@
 /** 모든 셀의 가로 크기 */
-const WIDTH = 10;
+const WIDTH = 5;
 /** 모든 셀의 세로 크기 */
-const HEIGHT = 10;
+const HEIGHT = 5;
 
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
