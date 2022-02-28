@@ -47,13 +47,13 @@ class Player {
   }
 
   init() {
-    if (!(0 <= this.x && this.x <= canvas.width)) {
+    if (!(0 <= this.x && this.x < canvas.width)) {
       this.x %= canvas.width;
       if (this.x < 0) this.x += canvas.width;
     }
-    if (!(0 <= this.y && this.y <= canvas.width)) {
+    if (!(0 <= this.y && this.y < canvas.height)) {
       this.y %= canvas.height;
-      if (this.y < 0) this.y += canvas.width;
+      if (this.y < 0) this.y += canvas.height;
     }
   }
 }
