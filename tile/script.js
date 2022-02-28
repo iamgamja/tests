@@ -115,6 +115,10 @@ setInterval(function() {
     if (pressed.ArrowRight) player.D();
 
     tails.push(new Tail(lastx, lasty));
+
+    if (  tails.find(t => t.x === player.x && t.y === player.y )  ) {
+      console.log('Game Over!');
+    }
   }
 }, 10);
 
@@ -125,6 +129,6 @@ function tickFn() {
   
   tails.forEach(e => e.draw());
   
-    player.draw();
+  player.draw();
 }
 const tick = requestAnimationFrame(tickFn);
