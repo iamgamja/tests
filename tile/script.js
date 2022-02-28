@@ -23,18 +23,23 @@ function DRAW({x, y, w, h, styles}) {
   ctx.fillRect(x, y, w, h);
 }
 
-class Player {
+class BaseNPC {
   /**
    * 
-   * @param {number} x 
-   * @param {number} y 
+   * @param {number} [x=0]
+   * @param {number} [y=0]
+   * @param {*} [color='black']
    */
-  constructor(x, y) {
+  constructor(x=0, y=0, color='black') {
     this.x = x;
     this.y = y;
+    this.color = color;
     this.init();
   }
-  
+
+  /**
+   * 이 객체를 캔버스에 그립니다.
+   */
   draw() {
     this.init();
     DRAW({
@@ -43,11 +48,11 @@ class Player {
       w: WIDTH,
       h: HEIGHT,
       styles: {
-        fillStyle: 'green'
+        fillStyle: this.color
       }
     });
   }
-
+  
   W() { this.y -= HEIGHT; }
   A() { this.x -= WIDTH; }
   S() { this.y += HEIGHT; }
@@ -63,9 +68,22 @@ class Player {
       if (this.y < 0) this.y += canvas.height;
     }
   }
+
 }
 
-const player = new Player(0, 0);
+class Player extends BaseNPC {
+  /**
+   * 
+   * @param {number} [x=0]
+   * @param {number} [y=0]
+   * @param {*} [color='green']
+   */
+  constructor(x=0, y=0, color='green') {
+    super();
+  }
+}
+
+const player = new Player();
 
 document.addEventListener('keydown', function(e) {
   switch (e.code) {
