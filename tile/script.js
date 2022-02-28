@@ -25,13 +25,13 @@ function DRAW({x, y, w, h, styles}) {
 
 class BaseEntity {
   /**
-   * @param {object} tmp
+   * @param {object} [tmp]
    * @param {number} [tmp.x=0]
    * @param {number} [tmp.y=0]
    * @param {*} [tmp.color='black']
    * @param {number} [tmp.speed=5]
    */
-  constructor({x=0, y=0, color='black', speed=5}) {
+  constructor({x=0, y=0, color='black', speed=5}={}) {
     this.x = x;
     this.y = y;
     this.color = color;
@@ -72,13 +72,13 @@ class BaseEntity {
 }
 
 class Player extends BaseEntity {
-  constructor({color='green'}) {
+  constructor({color='green'}={}) {
     super(...arguments);
   }
 }
 
 // main
-const player = new Player(250, 250);
+const player = new Player({x: 250, y: 250});
 
 const pressed = {};
 document.addEventListener('keydown', e => { pressed[e.code] = true });
