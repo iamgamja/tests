@@ -82,25 +82,8 @@ class Player extends BaseEntity {
   }
 }
 
-class Enemy extends BaseEntity {
-  /**
-   * 
-   * @param {number} [x=0]
-   * @param {number} [y=0]
-   * @param {*} [color='green']
-   */
-  constructor(x=0, y=0, color='red') {
-    super(x, y, color);
-  }
-}
-
-
 // main
 const player = new Player(250, 250);
-
-const enemies = [
-  new Enemy(100, 50),
-]
 
 document.addEventListener('keydown', function(e) {
   switch (e.code) {
@@ -120,8 +103,6 @@ document.addEventListener('keydown', function(e) {
   }
   player.init();
 });
-
-
 
 function tickFn() {
   requestAnimationFrame(tickFn);
