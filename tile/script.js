@@ -45,6 +45,17 @@ class Player {
       }
     });
   }
+
+  init() {
+    if (!(0 <= this.x && this.x <= canvas.width)) {
+      this.x %= canvas.width;
+      if (this.x < 0) this.x += canvas.width;
+    }
+    if (!(0 <= this.y && this.y <= canvas.width)) {
+      this.y %= canvas.height;
+      if (this.y < 0) this.y += canvas.width;
+    }
+  }
 }
 
 const player = new Player(0, 0);
@@ -65,7 +76,8 @@ document.addEventListener('keydown', function(e) {
       break;
     }
   }
-})
+  player.init();
+});
 
 function tick() {
   requestAnimationFrame(tick);
