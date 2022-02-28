@@ -81,11 +81,11 @@ document.addEventListener('keydown', function(e) {
   player.init();
 });
 
-function tick() {
-  requestAnimationFrame(tick);
+function tickFn() {
+  requestAnimationFrame(tickFn);
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   player.draw();
 }
-tick();
+const tick = requestAnimationFrame(tickFn);
