@@ -26,6 +26,7 @@ body {
 }
 
 body > div {
+  flex: 1;
   justify-content: center; /* 세로 가운데 정렬 */
 }
 
