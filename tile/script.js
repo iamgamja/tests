@@ -85,24 +85,16 @@ class Player extends BaseEntity {
 // main
 const player = new Player(250, 250);
 
-document.addEventListener('keydown', function(e) {
-  switch (e.code) {
-    case 'ArrowUp': {
-      player.W();
-      break;
-    } case 'ArrowLeft': {
-      player.A();
-      break;
-    } case 'ArrowDown': {
-      player.S();
-      break;
-    } case 'ArrowRight': {
-      player.D();
-      break;
-    }
-  }
-  player.init();
-});
+const pressed = {};
+document.addEventListener('keydown', e => { pressed[e.code] = true });
+document.addEventListener('keyup', e => { pressed[e.code] = false });
+
+setInterval(function() {
+  if (pressed.ArrowUp) player.W();
+  if (pressed.ArrowLeft) player.A();
+  if (pressed.ArrowDown) player.S();
+  if (pressed.ArrowRight) player.D();
+}, 100);
 
 function tickFn() {
   requestAnimationFrame(tickFn);
