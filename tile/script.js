@@ -35,6 +35,7 @@ class BaseEntity {
     this.x = x;
     this.y = y;
     this.color = color;
+    this.speed = speed;
     this.init();
   }
 
@@ -72,7 +73,7 @@ class BaseEntity {
 }
 
 class Player extends BaseEntity {
-  constructor({color='green'}={}) {
+  constructor({x, y, color='green', speed}={}) {
     super(...arguments);
   }
 }
