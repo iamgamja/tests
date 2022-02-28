@@ -49,6 +49,24 @@ class Player {
 
 const player = new Player(0, 0);
 
+document.addEventListener('keydown', function(e) {
+  switch (e.code) {
+    case 'ArrowUp': {
+      player.y -= HEIGHT;
+      break;
+    } case 'ArrowLeft': {
+      player.x -= WIDTH;
+      break;
+    } case 'ArrowDown': {
+      player.y += HEIGHT;
+      break;
+    } case 'ArrowRight': {
+      player.x += WIDTH;
+      break;
+    }
+  }
+})
+
 function tick() {
   requestAnimationFrame(tick);
 
