@@ -110,6 +110,5 @@ function tickFn() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   player.draw();
-  enemies.forEach(e => e.draw());
 }
 const tick = requestAnimationFrame(tickFn);
