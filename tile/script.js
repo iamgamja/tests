@@ -28,13 +28,11 @@ class BaseEntity {
    * @param {number} [x=0]
    * @param {number} [y=0]
    * @param {*} [color='black']
-   * @param {number} [speed=5]
    */
-  constructor(x=0, y=0, color='black', speed=5) {
+  constructor(x=0, y=0, color='black') {
     this.x = x;
     this.y = y;
     this.color = color;
-    this.speed = speed;
     this.init();
   }
 
@@ -54,11 +52,6 @@ class BaseEntity {
     });
   }
   
-  W() { this.y -= this.speed; }
-  A() { this.x -= this.speed; }
-  S() { this.y += this.speed; }
-  D() { this.x += this.speed; }
-
   init() {
     if (!(0 <= this.x && this.x < canvas.width)) {
       this.x %= canvas.width;
@@ -71,24 +64,59 @@ class BaseEntity {
   }
 }
 
-class Player extends BaseEntity {
+class MoveEntity extends BaseEntity {
+  /**
+   * @param {number} x 
+   * @param {number} y 
+   * @param {*} color 
+   * @param {number} speed 
+   */
+  constructor(x, y, color, speed=5) {
+    super(x, y, color);
+    this.speed = speed;
+  }
+
+  W() { this.y -= this.speed; }
+  A() { this.x -= this.speed; }
+  S() { this.y += this.speed; }
+  D() { this.x += this.speed; }
+}
+
+class Player extends MoveEntity {
   constructor(x, y, color='green', speed) {
     super(x, y, color, speed);
+  }
+}
+
+class Tail extends BaseEntity {
+  constructor(x, y, color='lime') {
+    super(x, y, color);
   }
 }
 
 // main
 const player = new Player(250, 250);
 
+/** @type {Tail[]} */
+const tails = [];
+
 const pressed = {};
 document.addEventListener('keydown', e => { pressed[e.code] = true });
 document.addEventListener('keyup', e => { pressed[e.code] = false });
 
 setInterval(function() {
-  if (pressed.ArrowUp) player.W();
-  if (pressed.ArrowLeft) player.A();
-  if (pressed.ArrowDown) player.S();
-  if (pressed.ArrowRight) player.D();
+  if (pressed.ArrowUp && pressed.ArrowLeft && pressed.ArrowDown && pressed.ArrowRight) {
+    const lastx = player.x;
+    const lasty = player.y;
+
+    if (pressed.ArrowUp) player.W();
+    if (pressed.ArrowLeft) player.A();
+    if (pressed.ArrowDown) player.S();
+    if (pressed.ArrowRight) player.D();
+
+    tails.push(new Tail(lastx, lasty));
+
+  }
 }, 10);
 
 function tickFn() {
@@ -97,5 +125,7 @@ function tickFn() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   player.draw();
+  
+  tails.forEach(e => e.draw());
 }
 const tick = requestAnimationFrame(tickFn);
