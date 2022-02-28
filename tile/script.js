@@ -1,7 +1,7 @@
 /** 모든 셀의 가로 크기 */
-const WIDTH = 25;
+const WIDTH = 10;
 /** 모든 셀의 세로 크기 */
-const HEIGHT = 25;
+const HEIGHT = 10;
 
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
@@ -94,7 +94,7 @@ setInterval(function() {
   if (pressed.ArrowLeft) player.A();
   if (pressed.ArrowDown) player.S();
   if (pressed.ArrowRight) player.D();
-}, 100);
+}, 50);
 
 function tickFn() {
   requestAnimationFrame(tickFn);
