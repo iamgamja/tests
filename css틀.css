@@ -15,7 +15,7 @@ html, body {
   flex-direction: column;
   align-items: center;
 }
-body > * {
+body > div.c {
   display: flex;
   align-items: center;
 } */
