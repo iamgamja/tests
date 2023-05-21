@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        text-align: center;
+      }
+
+      .view {
+        display: flex;
+        height: 50%;
+        position: relative;
+      }
+
+      .a-view,
+      .b-view {
+        width: 50%;
+      }
+
+      .note {
+        position: absolute;
+        border-top: 2px black solid;
+        width: 40%;
+        display: inline-block;
+        top: 100%;
+      }
+
+      .container {
+        display: flex;
+        height: 100%;
+      }
+
+      .a {
+        background-color: darkgreen;
+      }
+      .b {
+        background-color: coral;
+      }
+
+      .a,
+      .b {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <button class="download">download</button>
+    </div>
+    <div class="view">
+      <div class="a-view"></div>
+      <div class="b-view"></div>
+    </div>
+    <div class="container">
+      <div class="a"></div>
+      <div class="b"></div>
+    </div>
+
+    <script>
+      const arr1 = [];
+      const arr2 = [];
+
+      const starttime = Date.now() / 1000;
+
+      function makeanimation(direction) {
+        const target =
+          direction === "left"
+            ? document.querySelector(".a-view")
+            : document.querySelector(".b-view");
+
+        const ele = document.createElement("div");
+        ele.className = "note";
+        target.append(ele);
+
+        const anim_start_time = Date.now();
+
+        const timer = setInterval(() => {
+          const anim_now_time = Date.now();
+          const anim_diff_time = anim_now_time - anim_start_time;
+
+          if (anim_diff_time > 2000) {
+            clearInterval(timer);
+            ele.remove();
+          } else {
+            ele.style.top = `${(1 - anim_diff_time / 2000) * 100}%`;
+          }
+        }, 10);
+      }
+
+      const a = document.querySelector(".a");
+      const b = document.querySelector(".b");
+
+      a.addEventListener("click", () => {
+        const difftime = Date.now() / 1000 - starttime;
+        arr1.push(difftime);
+        makeanimation("left");
+      });
+
+      b.addEventListener("click", () => {
+        const difftime = Date.now() / 1000 - starttime;
+        arr2.push(difftime);
+        makeanimation("right");
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.code === "ArrowLeft") {
+          const difftime = Date.now() / 1000 - starttime;
+          arr1.push(difftime);
+          makeanimation("left");
+        } else if (e.code === "ArrowRight") {
+          const difftime = Date.now() / 1000 - starttime;
+          arr2.push(difftime);
+          makeanimation("right");
+        }
+      });
+
+      const download = document.querySelector(".download");
+
+      function downloadStr(filename, text) {
+        var element = document.createElement("a");
+        element.setAttribute(
+          "href",
+          "data:text/plain;charset=utf-8," + encodeURIComponent(text)
+        );
+        element.setAttribute("download", filename);
+
+        element.style.display = "none";
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+      }
+
+      download.addEventListener("click", () => {
+        const msg = `${JSON.stringify(arr1)}\n${JSON.stringify(arr2)}`;
+        downloadStr("file.txt", msg);
+      });
+    </script>
+  </body>
+</html>
